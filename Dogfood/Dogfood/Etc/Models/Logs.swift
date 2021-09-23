@@ -9,14 +9,17 @@ import Foundation
 
 class Logs {
     typealias log = (String, Date)
-    var datas: [log]
-    
-    init() {
-        datas = [("\u{1F474}", Date(timeIntervalSinceNow: 1)), ("\u{1F475}", Date(timeIntervalSinceNow: 2))]
+    typealias Listner = () -> Void
+    private var listner: Listner
+    var datas: [log] {
+        didSet {
+            listner()
+        }
     }
     
-    init(datas: [log]) {
-        self.datas = datas
+    init(listner: @escaping Listner) {
+        datas = []
+        self.listner = listner
     }
 }
 
