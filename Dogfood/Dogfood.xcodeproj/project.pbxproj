@@ -30,6 +30,9 @@
 		FFD9D65326FC7CA10079500E /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D65226FC7CA10079500E /* PopupViewController.swift */; };
 		FFD9D65A26FCA2930079500E /* foodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D65826FCA2930079500E /* foodCell.swift */; };
 		FFD9D65B26FCA2930079500E /* foodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D65926FCA2930079500E /* foodCell.xib */; };
+		FFD9D65F26FCA5C10079500E /* MainViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D65E26FCA5C10079500E /* MainViewController+Extension.swift */; };
+		FFD9D66226FCA6A80079500E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D66126FCA6A80079500E /* Log.swift */; };
+		FFD9D66526FCA7BC0079500E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D66426FCA7BC0079500E /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		FFD9D65226FC7CA10079500E /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		FFD9D65826FCA2930079500E /* foodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodCell.swift; sourceTree = "<group>"; };
 		FFD9D65926FCA2930079500E /* foodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = foodCell.xib; sourceTree = "<group>"; };
+		FFD9D65E26FCA5C10079500E /* MainViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Extension.swift"; sourceTree = "<group>"; };
+		FFD9D66126FCA6A80079500E /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		FFD9D66426FCA7BC0079500E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,11 +154,14 @@
 		FFD9D63726FC5A8E0079500E /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				FFD9D66326FCA7B10079500E /* Extension */,
+				FFD9D66026FCA6A20079500E /* Model */,
 				FFD9D64F26FC7BF10079500E /* Popup */,
 				FFD9D63C26FC63C50079500E /* Cell */,
 				FFD9D63826FC5AFE0079500E /* main.storyboard */,
 				FFD9D63A26FC5ED40079500E /* MainViewController.swift */,
 				FFD9D64526FC65B30079500E /* MainViewController+CollectionView.swift */,
+				FFD9D65E26FCA5C10079500E /* MainViewController+Extension.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -177,6 +186,22 @@
 				FFD9D65226FC7CA10079500E /* PopupViewController.swift */,
 			);
 			path = Popup;
+			sourceTree = "<group>";
+		};
+		FFD9D66026FCA6A20079500E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFD9D66126FCA6A80079500E /* Log.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FFD9D66326FCA7B10079500E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FFD9D66426FCA7BC0079500E /* Date+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,13 +331,16 @@
 				FFD9D62626FC55E50079500E /* ViewController.swift in Sources */,
 				FFD9D62226FC55E50079500E /* AppDelegate.swift in Sources */,
 				DD3CB51126FC6863004AEF7B /* EtcTableViewController.swift in Sources */,
+				FFD9D66526FCA7BC0079500E /* Date+Extension.swift in Sources */,
 				FFD9D62426FC55E50079500E /* SceneDelegate.swift in Sources */,
 				FFD9D63B26FC5ED40079500E /* MainViewController.swift in Sources */,
 				FFD9D64926FC6C130079500E /* imageCell.swift in Sources */,
 				FFD9D65326FC7CA10079500E /* PopupViewController.swift in Sources */,
+				FFD9D66226FCA6A80079500E /* Log.swift in Sources */,
 				FFD9D65A26FCA2930079500E /* foodCell.swift in Sources */,
 				DD3CB51626FC7B9F004AEF7B /* Logs.swift in Sources */,
 				DD3CB51326FC6968004AEF7B /* EtcTableViewCell.swift in Sources */,
+				FFD9D65F26FCA5C10079500E /* MainViewController+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

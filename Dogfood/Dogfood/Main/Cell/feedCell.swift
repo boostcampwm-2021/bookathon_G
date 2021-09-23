@@ -8,8 +8,8 @@
 import UIKit
 
 struct Feed {
-    let image:UIImage
-    let time:String
+    let image:String
+    let time:Date?
     let color:UIColor
 }
 
@@ -20,9 +20,9 @@ class feedCell: UICollectionViewCell {
     
     var feed:Feed? {
         didSet {
-            self.profile.image = feed!.image
+            self.profile.image = UIImage(named:  feed!.image)
             self.profile.layer.cornerRadius = 55
-            self.time.text = feed!.time
+            self.time.text =  feed!.time == nil ? "" : feed?.time!.text
             self.profile.backgroundColor = feed!.color
         }
     }

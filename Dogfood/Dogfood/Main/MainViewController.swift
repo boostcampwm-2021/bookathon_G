@@ -7,12 +7,16 @@
 
 import UIKit
 
+protocol mainViewDelegate:AnyObject {
+    func addFeedData(time:Date ,image:String ,color:UIColor)
+}
+
 class MainViewController: UIViewController {
     
     //MARK: - Properties
     let CellId = "imageCell"
     let feedId = "feedCell"
-    
+    var feedLogs:[Feed] = []
 
     //MARK: - IBOutlets
     

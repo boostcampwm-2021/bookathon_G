@@ -12,15 +12,11 @@ extension MainViewController: UICollectionViewDelegate , UICollectionViewDelegat
     //section number
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         if collectionView == familyCollectionView {
-        
             return 1
-            
         }
-        
+
         if collectionView == feedCollectionView {
-
             return 2
-
         }
 
         return 0
@@ -59,15 +55,19 @@ extension MainViewController: UICollectionViewDelegate , UICollectionViewDelegat
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: feedId, for: indexPath) as! feedCell
             
-            cell.feed = Feed(image: UIImage(named: "dog")!, time: "16:00",color: .clear)
-            
             if indexPath.section == 0 && indexPath.item == 0 {
-                cell.feed = Feed(image: UIImage(named: "plus")!, time: "", color: .systemBrown)
+                cell.feed = Feed(image: "plus", time: nil, color: .systemBrown)
+                return cell
             }
             
             if indexPath.section == 1 && indexPath.item == 2 {
-                cell.feed = Feed(image: UIImage(named: "more")!, time: "", color: .systemGray3)
+                cell.feed = Feed(image: "more", time: nil, color: .systemGray3)
+                return cell
             }
+            
+            let idx = indexPath.item + indexPath.section*3 - 1
+            
+            cell.feed = idx >= feedLogs.count ? Feed(image: "", time: nil , color: .systemGray) : feedLogs[idx]
                                                 
             return cell
         }
@@ -116,6 +116,7 @@ extension MainViewController: UICollectionViewDelegate , UICollectionViewDelegat
                 
                 let vc = UIStoryboard(name: "Popup", bundle: nil).instantiateViewController(withIdentifier: "popup") as! PopupViewController
                 
+                vc.delegate = self
                 vc.modalTransitionStyle = .crossDissolve
                 vc.modalPresentationStyle = .overFullScreen
                 

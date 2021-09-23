@@ -10,6 +10,8 @@ import UIKit
 class PopupViewController: UIViewController {
     
     //MARK: - Properties
+    
+    weak var delegate:mainViewDelegate?
     let cellId = "foodCell"
     let imgs:[String] = ["food1","food2","food3",
                          "food4","food5","food6"]
@@ -47,9 +49,7 @@ class PopupViewController: UIViewController {
     }
     
     @objc func dismissView() {
-        self.dismiss(animated: true) {
-            
-        }
+        self.dismiss(animated: true)
     }
 
 }
@@ -88,5 +88,13 @@ extension PopupViewController : UICollectionViewDelegate , UICollectionViewDeleg
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let idx = indexPath.section*3 + indexPath.item
+        self.dismiss(animated: true) {
+            self.delegate?.addFeedData(time: Date(), image: self.imgs[idx], color: self.colors[idx])
+        }
+                
+    }
   
 }
