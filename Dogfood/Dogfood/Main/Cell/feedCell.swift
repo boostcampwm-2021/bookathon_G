@@ -19,7 +19,7 @@ class feedCell: UICollectionViewCell {
             self.profile.image = UIImage(named:  feed!.image)
             self.profile.layer.cornerRadius = 55
             self.time.text =  feed!.time == nil ? "" : feed?.time!.text
-            self.profile.backgroundColor = feed!.color
+            self.profile.backgroundColor = .systemGray
         }
     }
     

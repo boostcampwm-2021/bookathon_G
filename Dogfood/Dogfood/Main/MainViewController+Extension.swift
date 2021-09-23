@@ -14,7 +14,7 @@ import UIKit
 extension MainViewController :mainViewDelegate {
     
     func addFeedData(time: Date, image: String, color: UIColor) {
-        self.feedLogs.append(Feed(image: image, time: time, color: color))
+        self.feedLogs.append(Feed(image: image, time: time))
         self.feedCollectionView.reloadData()
         
     }

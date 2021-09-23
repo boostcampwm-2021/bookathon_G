@@ -48,7 +48,7 @@ extension MainViewController {
             logs.forEach { log in
                 let img = log["icon"] as? String ?? "food1"
                 let time = log["time"] as? Timestamp
-                self.feedLogs.append(Feed(image: img, time: time?.dateValue(), color: .systemGray))
+                self.feedLogs.append(Feed(image: img, time: time?.dateValue()))
             }
             
             self.feedCollectionView.reloadData()
