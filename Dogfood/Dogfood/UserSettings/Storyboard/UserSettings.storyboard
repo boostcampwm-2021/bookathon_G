@@ -30,7 +30,7 @@
                                             <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="zdb-v5-ch5" kind="show" id="BKg-fG-eDT"/>
+                                            <action selector="invitationCodeButtonTouched:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="agY-qp-bdC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6S-Qu-5vc">
@@ -44,7 +44,7 @@
                                             <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="T5c-sR-CQe" kind="show" id="Fa3-8g-aQh"/>
+                                            <action selector="familyRegistrationButtonTouched:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hyN-oz-fDK"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -70,7 +70,7 @@
         <!--강아지를 등록하세요-->
         <scene sceneID="dJv-Ui-Gsw">
             <objects>
-                <viewController id="2fc-Zj-ZHc" customClass="DogRegistrationViewController" customModule="Dogfood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DogRegistrationViewController" id="2fc-Zj-ZHc" customClass="DogRegistrationViewController" customModule="Dogfood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z6n-iO-h8v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,11 +86,11 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="NIx-ow-WEr" kind="show" id="3lF-OM-CaA"/>
+                                    <action selector="nextButtonTouched:" destination="2fc-Zj-ZHc" eventType="touchUpInside" id="afi-4Y-EdX"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dogDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Ul5-L8-WKj">
-                                <rect key="frame" x="87" y="148" width="240" height="240"/>
+                                <rect key="frame" x="87" y="104" width="240" height="240"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="Cjk-Nq-R4s"/>
@@ -101,7 +101,7 @@
                                 </connections>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="까미" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YvQ-4G-cQU">
-                                <rect key="frame" x="20" y="445" width="374" height="50"/>
+                                <rect key="frame" x="20" y="401" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9Go-j3-oTb"/>
                                 </constraints>
@@ -112,7 +112,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQZ-hL-c7x">
-                                <rect key="frame" x="20" y="418" width="24.5" height="17"/>
+                                <rect key="frame" x="20" y="374" width="24.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -153,7 +153,7 @@
         <!--가족 이름을 입력하세요-->
         <scene sceneID="8l4-4Z-A5u">
             <objects>
-                <viewController id="T5c-sR-CQe" customClass="FamilyRegistrationViewController" customModule="Dogfood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FamilyRegistrationViewController" id="T5c-sR-CQe" customClass="FamilyRegistrationViewController" customModule="Dogfood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nCx-Ym-Nln">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,11 +170,11 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="2fc-Zj-ZHc" kind="show" id="GF4-yk-xHO"/>
+                                    <action selector="nextButtonTouched:" destination="T5c-sR-CQe" eventType="touchUpInside" id="4wW-hf-Vfe"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="만식이네" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lP5-1M-pXr">
-                                <rect key="frame" x="20" y="189" width="374" height="50"/>
+                                <rect key="frame" x="20" y="145" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8t4-uE-VbI"/>
                                 </constraints>
@@ -185,7 +185,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="함께하는 가족의 이름을 정해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgC-Y4-RiO">
-                                <rect key="frame" x="20" y="148" width="239" height="21"/>
+                                <rect key="frame" x="20" y="104" width="239" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -218,7 +218,7 @@
         <!--초대코드 입력하기-->
         <scene sceneID="ayh-m3-6JK">
             <objects>
-                <viewController id="zdb-v5-ch5" customClass="InvitationViewController" customModule="Dogfood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InvitationViewController" id="zdb-v5-ch5" customClass="InvitationViewController" customModule="Dogfood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0HZ-8u-301">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,11 +235,11 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="NIx-ow-WEr" kind="show" id="jRX-3E-haP"/>
+                                    <action selector="nextButtonTouched:" destination="zdb-v5-ch5" eventType="touchUpInside" id="Tvq-6T-6I1"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lt5-Fg-fII">
-                                <rect key="frame" x="20" y="189" width="374" height="50"/>
+                                <rect key="frame" x="20" y="145" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="s1N-Xs-sHE"/>
                                 </constraints>
@@ -250,7 +250,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가족에게 받은 초대 코드를 입력해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLn-qb-qhS">
-                                <rect key="frame" x="20" y="148" width="272" height="21"/>
+                                <rect key="frame" x="20" y="104" width="272" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -273,7 +273,7 @@
                         <barButtonItem key="backBarButtonItem" title="초대코드" id="487-RS-PG0"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="invitationCodeTextField" destination="Lt5-Fg-fII" id="lGG-kV-jZ2"/>
+                        <outlet property="invitationFamilyNameTextField" destination="Lt5-Fg-fII" id="lGG-kV-jZ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uka-en-7C7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -283,7 +283,7 @@
         <!--사용자를 등록하세요.-->
         <scene sceneID="jdn-HV-Gvp">
             <objects>
-                <viewController id="NIx-ow-WEr" customClass="UserRegistrationViewController" customModule="Dogfood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserRegistraionViewController" id="NIx-ow-WEr" customClass="UserRegistrationViewController" customModule="Dogfood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sip-Eb-83q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -302,8 +302,8 @@
                                     <action selector="moveNext:" destination="NIx-ow-WEr" eventType="touchUpInside" id="71v-c6-0vH"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="userDefault" translatesAutoresizingMaskIntoConstraints="NO" id="ijn-Yx-Elo">
-                                <rect key="frame" x="87" y="147" width="240" height="240"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person1" translatesAutoresizingMaskIntoConstraints="NO" id="ijn-Yx-Elo">
+                                <rect key="frame" x="87" y="104" width="240" height="240"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="JY8-nx-VhV"/>
@@ -314,7 +314,7 @@
                                 </connections>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="완숙" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZJM-rQ-7pE">
-                                <rect key="frame" x="20" y="445" width="374" height="50"/>
+                                <rect key="frame" x="20" y="401" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="QiA-Dv-St0"/>
                                 </constraints>
@@ -325,7 +325,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAb-mJ-lic">
-                                <rect key="frame" x="20" y="418" width="24.5" height="17"/>
+                                <rect key="frame" x="20" y="374" width="24.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -380,12 +380,9 @@
             <point key="canvasLocation" x="-210.1449275362319" y="124.55357142857142"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="3lF-OM-CaA"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="dogDefault" width="456" height="444"/>
-        <image name="userDefault" width="460" height="460"/>
+        <image name="person1" width="460" height="460"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

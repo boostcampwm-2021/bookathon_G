@@ -13,6 +13,9 @@
 		250DCD1126FC9A9100F2D0E9 /* UserRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DCD1026FC9A9100F2D0E9 /* UserRegistrationViewController.swift */; };
 		250DCD1326FC9AA300F2D0E9 /* DogRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DCD1226FC9AA300F2D0E9 /* DogRegistrationViewController.swift */; };
 		250DCD1526FC9AB500F2D0E9 /* FamilyRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DCD1426FC9AB500F2D0E9 /* FamilyRegistrationViewController.swift */; };
+		250DCD1826FCCCA100F2D0E9 /* SwiftExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DCD1726FCCCA100F2D0E9 /* SwiftExtension.swift */; };
+		250DCD1D26FCE2DC00F2D0E9 /* PersonPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 250DCD1C26FCE2DC00F2D0E9 /* PersonPopup.storyboard */; };
+		250DCD1F26FCE30400F2D0E9 /* PersonPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DCD1E26FCE30400F2D0E9 /* PersonPopupViewController.swift */; };
 		295C614789445E9EA40DEC4E /* Pods_Dogfood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCD15804BF4F735D96B9338 /* Pods_Dogfood.framework */; };
 		DD3CB50F26FC5EA3004AEF7B /* Etc.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3CB50E26FC5EA3004AEF7B /* Etc.storyboard */; };
 		DD3CB51126FC6863004AEF7B /* EtcTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3CB51026FC6863004AEF7B /* EtcTableViewController.swift */; };
@@ -57,6 +60,9 @@
 		250DCD1026FC9A9100F2D0E9 /* UserRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationViewController.swift; sourceTree = "<group>"; };
 		250DCD1226FC9AA300F2D0E9 /* DogRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRegistrationViewController.swift; sourceTree = "<group>"; };
 		250DCD1426FC9AB500F2D0E9 /* FamilyRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyRegistrationViewController.swift; sourceTree = "<group>"; };
+		250DCD1726FCCCA100F2D0E9 /* SwiftExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExtension.swift; sourceTree = "<group>"; };
+		250DCD1C26FCE2DC00F2D0E9 /* PersonPopup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PersonPopup.storyboard; sourceTree = "<group>"; };
+		250DCD1E26FCE30400F2D0E9 /* PersonPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonPopupViewController.swift; sourceTree = "<group>"; };
 		6E756356BE3253842A20C05C /* Pods-Dogfood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dogfood.release.xcconfig"; path = "Target Support Files/Pods-Dogfood/Pods-Dogfood.release.xcconfig"; sourceTree = "<group>"; };
 		AFCD15804BF4F735D96B9338 /* Pods_Dogfood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dogfood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA8D8ADF0275471DD8A1668 /* Pods-Dogfood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dogfood.debug.xcconfig"; path = "Target Support Files/Pods-Dogfood/Pods-Dogfood.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,12 +119,14 @@
 		250DCD0826FC985A00F2D0E9 /* UserSettings */ = {
 			isa = PBXGroup;
 			children = (
+				250DCD1626FCCC8700F2D0E9 /* Extensions */,
 				250DCD0926FC99F100F2D0E9 /* Storyboard */,
 				250DCD0C26FC9A5E00F2D0E9 /* SelectViewController.swift */,
 				250DCD0E26FC9A7600F2D0E9 /* InvitationViewController.swift */,
 				250DCD1026FC9A9100F2D0E9 /* UserRegistrationViewController.swift */,
 				250DCD1226FC9AA300F2D0E9 /* DogRegistrationViewController.swift */,
 				250DCD1426FC9AB500F2D0E9 /* FamilyRegistrationViewController.swift */,
+				250DCD1E26FCE30400F2D0E9 /* PersonPopupViewController.swift */,
 			);
 			path = UserSettings;
 			sourceTree = "<group>";
@@ -127,8 +135,17 @@
 			isa = PBXGroup;
 			children = (
 				250DCD0A26FC9A1200F2D0E9 /* UserSettings.storyboard */,
+				250DCD1C26FCE2DC00F2D0E9 /* PersonPopup.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		250DCD1626FCCC8700F2D0E9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				250DCD1726FCCCA100F2D0E9 /* SwiftExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		57EE8FACC9284A978FFAD44B /* Frameworks */ = {
@@ -333,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				250DCD1D26FCE2DC00F2D0E9 /* PersonPopup.storyboard in Resources */,
 				FFD9D63926FC5AFE0079500E /* main.storyboard in Resources */,
 				FFD9D64A26FC6C130079500E /* imageCell.xib in Resources */,
 				FFD9D67F26FCF0890079500E /* yourChatCell.xib in Resources */,
@@ -404,6 +422,7 @@
 				FFD9D64626FC65B30079500E /* MainViewController+CollectionView.swift in Sources */,
 				FFD9D64D26FC737F0079500E /* feedCell.swift in Sources */,
 				250DCD1326FC9AA300F2D0E9 /* DogRegistrationViewController.swift in Sources */,
+				250DCD1F26FCE30400F2D0E9 /* PersonPopupViewController.swift in Sources */,
 				FFD9D62626FC55E50079500E /* ViewController.swift in Sources */,
 				FFD9D62226FC55E50079500E /* AppDelegate.swift in Sources */,
 				250DCD0D26FC9A5E00F2D0E9 /* SelectViewController.swift in Sources */,
@@ -414,6 +433,7 @@
 				FFD9D66726FCAB8B0079500E /* Config.swift in Sources */,
 				FFD9D63B26FC5ED40079500E /* MainViewController.swift in Sources */,
 				FFD9D64926FC6C130079500E /* imageCell.swift in Sources */,
+				250DCD1826FCCCA100F2D0E9 /* SwiftExtension.swift in Sources */,
 				FFD9D65326FC7CA10079500E /* PopupViewController.swift in Sources */,
 				FFD9D66226FCA6A80079500E /* Feed.swift in Sources */,
 				FFD9D65A26FCA2930079500E /* foodCell.swift in Sources */,
