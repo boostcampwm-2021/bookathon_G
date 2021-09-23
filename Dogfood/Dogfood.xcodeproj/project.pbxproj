@@ -28,6 +28,8 @@
 		FFD9D64E26FC737F0079500E /* feedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D64C26FC737F0079500E /* feedCell.xib */; };
 		FFD9D65126FC7BFB0079500E /* Popup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D65026FC7BFB0079500E /* Popup.storyboard */; };
 		FFD9D65326FC7CA10079500E /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D65226FC7CA10079500E /* PopupViewController.swift */; };
+		FFD9D65A26FCA2930079500E /* foodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D65826FCA2930079500E /* foodCell.swift */; };
+		FFD9D65B26FCA2930079500E /* foodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D65926FCA2930079500E /* foodCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		FFD9D64C26FC737F0079500E /* feedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = feedCell.xib; sourceTree = "<group>"; };
 		FFD9D65026FC7BFB0079500E /* Popup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popup.storyboard; sourceTree = "<group>"; };
 		FFD9D65226FC7CA10079500E /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		FFD9D65826FCA2930079500E /* foodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodCell.swift; sourceTree = "<group>"; };
+		FFD9D65926FCA2930079500E /* foodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = foodCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +131,6 @@
 		FFD9D62026FC55E50079500E /* Dogfood */ = {
 			isa = PBXGroup;
 			children = (
-
 				FFD9D63726FC5A8E0079500E /* Main */,
 				DD3CB50D26FC5E88004AEF7B /* Etc */,
 				FFD9D62126FC55E50079500E /* AppDelegate.swift */,
@@ -161,6 +164,8 @@
 				FFD9D64826FC6C130079500E /* imageCell.xib */,
 				FFD9D64B26FC737F0079500E /* feedCell.swift */,
 				FFD9D64C26FC737F0079500E /* feedCell.xib */,
+				FFD9D65826FCA2930079500E /* foodCell.swift */,
+				FFD9D65926FCA2930079500E /* foodCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 				FFD9D63926FC5AFE0079500E /* main.storyboard in Resources */,
 				FFD9D64A26FC6C130079500E /* imageCell.xib in Resources */,
 				DD3CB50F26FC5EA3004AEF7B /* Etc.storyboard in Resources */,
+				FFD9D65B26FCA2930079500E /* foodCell.xib in Resources */,
 				FFD9D62E26FC55E90079500E /* LaunchScreen.storyboard in Resources */,
 				FFD9D62B26FC55E90079500E /* Assets.xcassets in Resources */,
 				FFD9D62926FC55E50079500E /* Main.storyboard in Resources */,
@@ -304,6 +310,7 @@
 				FFD9D63B26FC5ED40079500E /* MainViewController.swift in Sources */,
 				FFD9D64926FC6C130079500E /* imageCell.swift in Sources */,
 				FFD9D65326FC7CA10079500E /* PopupViewController.swift in Sources */,
+				FFD9D65A26FCA2930079500E /* foodCell.swift in Sources */,
 				DD3CB51626FC7B9F004AEF7B /* Logs.swift in Sources */,
 				DD3CB51326FC6968004AEF7B /* EtcTableViewCell.swift in Sources */,
 			);
