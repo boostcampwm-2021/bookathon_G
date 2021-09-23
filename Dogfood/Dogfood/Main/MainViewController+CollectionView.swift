@@ -67,7 +67,7 @@ extension MainViewController: UICollectionViewDelegate , UICollectionViewDelegat
             
             let idx = indexPath.item + indexPath.section*3 - 1
             
-            cell.log = idx >= feedLogs.count ? Log(foodImgStr: "", imgStr: "", time: Date()) : feedLogs[idx]
+            cell.log = idx >= feedLogs.count ? Log(foodImgStr: "", imgStr: "", time: Date()) : feedLogs.reversed()[idx]
                                                 
             return cell
         }
@@ -126,7 +126,6 @@ extension MainViewController: UICollectionViewDelegate , UICollectionViewDelegat
             if indexPath.section == 1 && indexPath.item == 2 {
                 
                 let vc = UIStoryboard(name: "Etc", bundle: nil).instantiateViewController(withIdentifier: "etc") as! EtcTableViewController
-//                vc.documentId = "1"
                 vc.logs = self.feedLogs
                 self.navigationController?.pushViewController(vc, animated: true)
                 

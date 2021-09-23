@@ -42,6 +42,12 @@
 		FFD9D66926FCAD110079500E /* MainViewController+Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D66826FCAD110079500E /* MainViewController+Firestore.swift */; };
 		FFD9D66B26FCB02B0079500E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D66A26FCB02B0079500E /* User.swift */; };
 		FFD9D66D26FCDC0C0079500E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D66C26FCDC0C0079500E /* String+Extension.swift */; };
+		FFD9D67026FCEF9C0079500E /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D66F26FCEF9C0079500E /* Chat.storyboard */; };
+		FFD9D67226FCEFDA0079500E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D67126FCEFDA0079500E /* ChatViewController.swift */; };
+		FFD9D67A26FCF0780079500E /* myChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D67826FCF0780079500E /* myChatCell.swift */; };
+		FFD9D67B26FCF0780079500E /* myChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D67926FCF0780079500E /* myChatCell.xib */; };
+		FFD9D67E26FCF0890079500E /* yourChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D67C26FCF0890079500E /* yourChatCell.swift */; };
+		FFD9D67F26FCF0890079500E /* yourChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D67D26FCF0890079500E /* yourChatCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +90,12 @@
 		FFD9D66826FCAD110079500E /* MainViewController+Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Firestore.swift"; sourceTree = "<group>"; };
 		FFD9D66A26FCB02B0079500E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FFD9D66C26FCDC0C0079500E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		FFD9D66F26FCEF9C0079500E /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		FFD9D67126FCEFDA0079500E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		FFD9D67826FCF0780079500E /* myChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myChatCell.swift; sourceTree = "<group>"; };
+		FFD9D67926FCF0780079500E /* myChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = myChatCell.xib; sourceTree = "<group>"; };
+		FFD9D67C26FCF0890079500E /* yourChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yourChatCell.swift; sourceTree = "<group>"; };
+		FFD9D67D26FCF0890079500E /* yourChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = yourChatCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +179,7 @@
 		FFD9D62026FC55E50079500E /* Dogfood */ = {
 			isa = PBXGroup;
 			children = (
+				FFD9D66E26FCEF920079500E /* Chat */,
 				250DCD0826FC985A00F2D0E9 /* UserSettings */,
 				FFD9D63726FC5A8E0079500E /* Main */,
 				DD3CB50D26FC5E88004AEF7B /* Etc */,
@@ -239,6 +252,27 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		FFD9D66E26FCEF920079500E /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				FFD9D67326FCEFE30079500E /* Cell */,
+				FFD9D66F26FCEF9C0079500E /* Chat.storyboard */,
+				FFD9D67126FCEFDA0079500E /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		FFD9D67326FCEFE30079500E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FFD9D67826FCF0780079500E /* myChatCell.swift */,
+				FFD9D67926FCF0780079500E /* myChatCell.xib */,
+				FFD9D67C26FCF0890079500E /* yourChatCell.swift */,
+				FFD9D67D26FCF0890079500E /* yourChatCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -301,10 +335,13 @@
 			files = (
 				FFD9D63926FC5AFE0079500E /* main.storyboard in Resources */,
 				FFD9D64A26FC6C130079500E /* imageCell.xib in Resources */,
+				FFD9D67F26FCF0890079500E /* yourChatCell.xib in Resources */,
 				250DCD0B26FC9A1200F2D0E9 /* UserSettings.storyboard in Resources */,
 				DD3CB50F26FC5EA3004AEF7B /* Etc.storyboard in Resources */,
 				FFD9D65B26FCA2930079500E /* foodCell.xib in Resources */,
+				FFD9D67B26FCF0780079500E /* myChatCell.xib in Resources */,
 				FFD9D62E26FC55E90079500E /* LaunchScreen.storyboard in Resources */,
+				FFD9D67026FCEF9C0079500E /* Chat.storyboard in Resources */,
 				FFD9D62B26FC55E90079500E /* Assets.xcassets in Resources */,
 				FFD9D62926FC55E50079500E /* Main.storyboard in Resources */,
 				FFD9D65126FC7BFB0079500E /* Popup.storyboard in Resources */,
@@ -363,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				250DCD1126FC9A9100F2D0E9 /* UserRegistrationViewController.swift in Sources */,
+				FFD9D67A26FCF0780079500E /* myChatCell.swift in Sources */,
 				FFD9D64626FC65B30079500E /* MainViewController+CollectionView.swift in Sources */,
 				FFD9D64D26FC737F0079500E /* feedCell.swift in Sources */,
 				250DCD1326FC9AA300F2D0E9 /* DogRegistrationViewController.swift in Sources */,
@@ -381,12 +419,14 @@
 				FFD9D65A26FCA2930079500E /* foodCell.swift in Sources */,
 				FFD9D66B26FCB02B0079500E /* User.swift in Sources */,
 				250DCD0F26FC9A7600F2D0E9 /* InvitationViewController.swift in Sources */,
+				FFD9D67E26FCF0890079500E /* yourChatCell.swift in Sources */,
 				FFD9D66D26FCDC0C0079500E /* String+Extension.swift in Sources */,
 				FFD9D63B26FC5ED40079500E /* MainViewController.swift in Sources */,
 				FFD9D64926FC6C130079500E /* imageCell.swift in Sources */,
 				FFD9D65326FC7CA10079500E /* PopupViewController.swift in Sources */,
 				250DCD1526FC9AB500F2D0E9 /* FamilyRegistrationViewController.swift in Sources */,
 				DD3CB51326FC6968004AEF7B /* EtcTableViewCell.swift in Sources */,
+				FFD9D67226FCEFDA0079500E /* ChatViewController.swift in Sources */,
 				FFD9D65F26FCA5C10079500E /* MainViewController+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -47,9 +47,6 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Ni-4S-GAq">
                                 <rect key="frame" x="0.0" y="368" width="414" height="494"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="494" id="sqT-5N-ANC"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xam-qR-Lyj">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -66,13 +63,13 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="4Ni-4S-GAq" secondAttribute="bottom" id="AgO-hi-Qii"/>
                             <constraint firstItem="i9m-lA-1kh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="BPs-xD-EV2"/>
                             <constraint firstItem="aPN-zv-E1b" firstAttribute="centerX" secondItem="i9m-lA-1kh" secondAttribute="centerX" id="Hg4-0x-awT"/>
-                            <constraint firstItem="wdF-cq-FDU" firstAttribute="top" secondItem="aPN-zv-E1b" secondAttribute="bottom" constant="20" id="JmY-NS-CxO"/>
                             <constraint firstItem="i9m-lA-1kh" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="LOA-hb-MxN"/>
                             <constraint firstItem="wdF-cq-FDU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="czS-ck-tQm"/>
                             <constraint firstItem="4Ni-4S-GAq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gmN-Yp-NKc"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4Ni-4S-GAq" secondAttribute="trailing" id="oSI-ID-VCV"/>
                             <constraint firstItem="4Ni-4S-GAq" firstAttribute="top" secondItem="wdF-cq-FDU" secondAttribute="bottom" constant="20" id="qXa-3H-E30"/>
                             <constraint firstItem="wdF-cq-FDU" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="tbd-R8-y9k"/>
+                            <constraint firstItem="wdF-cq-FDU" firstAttribute="top" secondItem="aPN-zv-E1b" secondAttribute="bottom" constant="20" id="xIZ-3p-BRN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BdM-p2-5Ij"/>

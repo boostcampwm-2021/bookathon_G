@@ -61,6 +61,9 @@ struct Config {
     static let users = "users"
     static let dogs = "Dogs"
     static let family = "family"
+    static let userName = "userName"
+    static let familyCode = "familyCode"
+    static let userImg = "userImg"
     
 }
 
