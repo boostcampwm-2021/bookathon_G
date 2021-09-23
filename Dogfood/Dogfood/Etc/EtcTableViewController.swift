@@ -11,7 +11,6 @@ import FirebaseFirestore
 
 class EtcTableViewController: UITableViewController {
     
-    var documentId: String?
     var logs: [Log]!
     lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
@@ -40,8 +39,8 @@ class EtcTableViewController: UITableViewController {
             return UITableViewCell()
         }
         cell.timeEmoji.text = dateFormatter.string(from: logs[indexPath.row].time)
-        cell.detailEmoji.text = logs[indexPath.row].foodImgStr + "을 줬어요"
-        cell.userImageView.image = UIImage(named: logs[indexPath.row].imgStr)
+        cell.detailEmoji.text = (FoodInfo(rawValue: logs[indexPath.row].foodImgStr)?.name ?? "사료") + "을 줬어요"
+        cell.userImageView.image = UserInfo(rawValue:  logs[indexPath.row].imgStr)?.image ?? UIImage(named:"person1")!
         return cell
     }
 }

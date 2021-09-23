@@ -14,6 +14,7 @@ class EtcTableViewCell: UITableViewCell, UINavigationControllerDelegate {
     @IBOutlet weak var userImageView: UIImageView!
     
     override func awakeFromNib() {
+        userImageView.layer.cornerRadius = 30
         super.awakeFromNib()
     }
 }
