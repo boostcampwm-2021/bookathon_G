@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
     //MARK: - Properties
     let CellId = "imageCell"
     let feedId = "feedCell"
-    var feedLogs:[Feed] = []
+    var feedLogs:[DogLog] = []
     var members:[User] = []
     var userIdx:String {
         let idx = UserDefaults.standard.integer(forKey: "userIdx") ?? 1

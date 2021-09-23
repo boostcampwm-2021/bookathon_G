@@ -8,7 +8,20 @@
 import Foundation
 import UIKit
 
-struct Feed {
-    let image:String
-    let time:Date?
+struct DogLog {
+    let imgUrl:String
+    let name:String
+    let Logs:[Log]
 }
+
+struct Log {
+    let foodImgStr:String
+    let imgStr:String
+    let time:Date
+}
+
+struct User {
+    let imgStr:String
+    let name:String
+}
+

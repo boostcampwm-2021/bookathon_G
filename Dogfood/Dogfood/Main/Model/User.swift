@@ -7,8 +7,3 @@
 
 import Foundation
 
-struct User {
-    let familyCode: String
-    let img:String
-    let name:String
-}
