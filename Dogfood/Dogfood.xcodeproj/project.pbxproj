@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		295C614789445E9EA40DEC4E /* Pods_Dogfood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCD15804BF4F735D96B9338 /* Pods_Dogfood.framework */; };
+		DD3CB50F26FC5EA3004AEF7B /* Etc.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3CB50E26FC5EA3004AEF7B /* Etc.storyboard */; };
 		FFD9D62226FC55E50079500E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D62126FC55E50079500E /* AppDelegate.swift */; };
 		FFD9D62426FC55E50079500E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D62326FC55E50079500E /* SceneDelegate.swift */; };
 		FFD9D62626FC55E50079500E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D62526FC55E50079500E /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 		6E756356BE3253842A20C05C /* Pods-Dogfood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dogfood.release.xcconfig"; path = "Target Support Files/Pods-Dogfood/Pods-Dogfood.release.xcconfig"; sourceTree = "<group>"; };
 		AFCD15804BF4F735D96B9338 /* Pods_Dogfood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dogfood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA8D8ADF0275471DD8A1668 /* Pods-Dogfood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dogfood.debug.xcconfig"; path = "Target Support Files/Pods-Dogfood/Pods-Dogfood.debug.xcconfig"; sourceTree = "<group>"; };
+		DD3CB50E26FC5EA3004AEF7B /* Etc.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Etc.storyboard; sourceTree = "<group>"; };
 		FFD9D61E26FC55E50079500E /* Dogfood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dogfood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD9D62126FC55E50079500E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD9D62326FC55E50079500E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,8 +60,15 @@
 				CDA8D8ADF0275471DD8A1668 /* Pods-Dogfood.debug.xcconfig */,
 				6E756356BE3253842A20C05C /* Pods-Dogfood.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DD3CB50D26FC5E88004AEF7B /* etc */ = {
+			isa = PBXGroup;
+			children = (
+				DD3CB50E26FC5EA3004AEF7B /* Etc.storyboard */,
+			);
+			path = etc;
 			sourceTree = "<group>";
 		};
 		FFD9D61526FC55E50079500E = {
@@ -83,6 +92,7 @@
 		FFD9D62026FC55E50079500E /* Dogfood */ = {
 			isa = PBXGroup;
 			children = (
+				DD3CB50D26FC5E88004AEF7B /* etc */,
 				FFD9D62126FC55E50079500E /* AppDelegate.swift */,
 				FFD9D62326FC55E50079500E /* SceneDelegate.swift */,
 				FFD9D62526FC55E50079500E /* ViewController.swift */,
@@ -155,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD3CB50F26FC5EA3004AEF7B /* Etc.storyboard in Resources */,
 				FFD9D62E26FC55E90079500E /* LaunchScreen.storyboard in Resources */,
 				FFD9D62B26FC55E90079500E /* Assets.xcassets in Resources */,
 				FFD9D62926FC55E50079500E /* Main.storyboard in Resources */,
