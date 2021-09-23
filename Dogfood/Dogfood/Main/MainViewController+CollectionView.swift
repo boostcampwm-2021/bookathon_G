@@ -121,6 +121,13 @@ extension MainViewController: UICollectionViewDelegate , UICollectionViewDelegat
                 
                 self.present(vc, animated: true, completion: nil)
             }
+            
+            if indexPath.section == 1 && indexPath.item == 2 {
+                
+                let vc = UIStoryboard(name: "Etc", bundle: nil).instantiateViewController(withIdentifier: "etc") as! EtcTableViewController
+                self.navigationController?.pushViewController(vc, animated: true)
+                
+            }
         }
     }
 }

@@ -10,7 +10,7 @@
         <!--더보기-->
         <scene sceneID="r6I-4x-A6c">
             <objects>
-                <tableViewController storyboardIdentifier="EtcTableViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="N58-a9-OIF" customClass="EtcTableViewController" customModule="Dogfood" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="etc" storyboardIdentifier="etc" automaticallyAdjustsScrollViewInsets="NO" id="N58-a9-OIF" customClass="EtcTableViewController" customModule="Dogfood" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="JX6-pn-c8u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3Z-GB-fyZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2626.0869565217395" y="-42.1875"/>
+            <point key="canvasLocation" x="2599" y="-42"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="i6o-FV-j2f">
