@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseFirestore
+import FirebaseStorage
 
 protocol mainViewDelegate:AnyObject {
     func addFeedData(time:Date ,image:String )
@@ -20,6 +21,7 @@ class MainViewController: UIViewController {
     var feedLogs:[Log] = []
     var members:[User] = []
     var user:User?
+    let storage = Storage.storage()
     var dog:[String:Any] = [:]
     var dogname:String = ""
     var dogImg: String = ""
@@ -50,7 +52,7 @@ class MainViewController: UIViewController {
         navigationSet()
         layoutSet()
         collectionViewSet()
-        addSnapshitListener()
+        addSnapshitListener()        
         
     }
     
@@ -78,9 +80,14 @@ class MainViewController: UIViewController {
         self.feedCollectionView.dataSource = self
         
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        print(feedCollectionView.numberOfSections)
-    }
 
+    func downloadimage(imgview:UIImageView){
+        let url = dog["imgUrl"] as? String ?? ""
+        storage.reference(forURL: url).downloadURL { (url, error) in
+        let data = NSData(contentsOf: url!)
+        let image = UIImage(data: data! as Data)
+        imgview.image = image
+    }
+        
+    }
 }

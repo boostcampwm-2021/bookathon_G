@@ -40,6 +40,8 @@ extension MainViewController {
             
             self.familyCollectionView.reloadData()
             self.feedCollectionView.reloadData()
+            
+            self.downloadimage(imgview: self.dogProfile)
         }
     
         

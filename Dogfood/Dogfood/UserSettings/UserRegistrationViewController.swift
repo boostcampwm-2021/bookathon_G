@@ -114,7 +114,8 @@ extension UserRegistrationViewController :PersonPopupViewControllerDelegate {
     
     func addPersonData(image: String) {
         self.userImageString = image
-        self.userImageView.image = UIImage(imageLiteralResourceName: image)
+        self.userImageView.image = UserInfo(rawValue: image)?.image
+        UserDefaults.standard.set(image, forKey: Config.userImg)
     }
         
 }

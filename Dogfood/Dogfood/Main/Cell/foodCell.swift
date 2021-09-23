@@ -19,7 +19,13 @@ class foodCell: UICollectionViewCell {
     
     var food:Food? {
         didSet {
-            self.image.image = UIImage(named: food!.image)!
+            
+            if food!.image.contains("person") {
+                self.image.image = UserInfo(rawValue: food!.image)?.image
+            }else{
+                self.image.image = UIImage(named: food!.image)
+            }
+            
             self.image.layer.cornerRadius = 33
             self.image.backgroundColor = food!.color
         }
