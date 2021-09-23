@@ -5,7 +5,7 @@
 | **ID** | **이름** | **역할** |
 | :----: | :------: | :------: |
 |  S034  |  윤상진  | iOS |
-|  S046  |  이진하  | iOS  |
+|  S046  |  이진하  | iOS |
 |  S058  |  최완식  | iOS |
 
 
@@ -30,10 +30,23 @@
 
 ### 🖼 와이어프레임
 
+![image](https://user-images.githubusercontent.com/37871541/134456379-d0f952d7-a27c-458d-b554-0ea75809745d.png)
+
+
+### 💾 데이터베이스 구조
+<img width="1111" alt="스크린샷 2021-09-23 오후 2 39 41" src="https://user-images.githubusercontent.com/37871541/134459394-5a682a80-5663-40db-a954-f2c089313dd6.png">
+<img width="1111" alt="스크린샷 2021-09-23 오후 2 39 57" src="https://user-images.githubusercontent.com/37871541/134459393-405443ba-7f30-4741-b601-8cd27c5e2c66.png">
+<img width="1111" alt="스크린샷 2021-09-23 오후 2 40 08" src="https://user-images.githubusercontent.com/37871541/134459389-0416fbb0-191e-458e-b254-13cc6609bf55.png">
+
+
+
+### 🖥 기술 스택
+
+* FireBase
+* UIKit
 
 ### ✔️ 목표
 
-- S034_윤상진 : 
-- S046_이진하 :
-- S058_최완식 :
-- 
+- S034_윤상진 : 팀 프로젝트 경험이 없었는데, 재밌게 같이 개발 1박2일 즐기고 싶습니다.
+- S046_이진하 : 팀플도 하고 친구도 만들고 싶습니다~ :) 
+- S058_최완식 : 캠퍼분과 친해지고 싶어요
