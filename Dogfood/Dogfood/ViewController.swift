@@ -14,7 +14,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func move(_ sender: Any) {
-        let vc = UIStoryboard(name: "main", bundle: nil).instantiateViewController(withIdentifier: "main")
+//        let vc = UIStoryboard(name: "main", bundle: nil).instantiateViewController(withIdentifier: "main")
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+        let vc = UIStoryboard(name: "UserSettings", bundle: nil).instantiateViewController(withIdentifier: "SelectViewController")
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--어떤 사용자세요?-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SelectViewController" id="Y6W-OH-hqX" customClass="SelectViewController" customModule="Dogfood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S2J-qm-2kM">
+                                <rect key="frame" x="20" y="388" width="374" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvm-LV-ato">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="j89-hF-Vsu"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="이미 가족이 있어요!">
+                                            <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="zdb-v5-ch5" kind="show" id="BKg-fG-eDT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6S-Qu-5vc">
+                                        <rect key="frame" x="0.0" y="70" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Rwc-Bi-uKv"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="새로운 가족을 등록하고 싶어요!">
+                                            <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="T5c-sR-CQe" kind="show" id="Fa3-8g-aQh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="S2J-qm-2kM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="H9O-48-YqY"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="S2J-qm-2kM" secondAttribute="trailing" constant="20" id="MhM-4r-Dj1"/>
+                            <constraint firstItem="S2J-qm-2kM" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="hLo-BR-p6q"/>
+                            <constraint firstItem="S2J-qm-2kM" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="pSZ-ea-D67"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="어떤 사용자세요?" largeTitleDisplayMode="always" id="7j1-mU-ZQq">
+                        <barButtonItem key="backBarButtonItem" title="선택화면" id="W2K-mg-7Ow"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="124.55357142857142"/>
+        </scene>
+        <!--강아지를 등록하세요-->
+        <scene sceneID="dJv-Ui-Gsw">
+            <objects>
+                <viewController id="2fc-Zj-ZHc" customClass="DogRegistrationViewController" customModule="Dogfood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z6n-iO-h8v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvA-Y6-HIt">
+                                <rect key="frame" x="20" y="812" width="374" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3pB-jb-NE1"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="NIx-ow-WEr" kind="show" id="3lF-OM-CaA"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dogDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Ul5-L8-WKj">
+                                <rect key="frame" x="87" y="148" width="240" height="240"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Cjk-Nq-R4s"/>
+                                    <constraint firstAttribute="height" constant="240" id="FZ1-v5-Wqe"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="rgo-S2-GZN" appends="YES" id="CpB-cx-fAT"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="까미" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YvQ-4G-cQU">
+                                <rect key="frame" x="20" y="445" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9Go-j3-oTb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2fc-Zj-ZHc" id="Vg6-M6-cH5"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQZ-hL-c7x">
+                                <rect key="frame" x="20" y="418" width="24.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Lhe-Kf-HPD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UQZ-hL-c7x" firstAttribute="top" secondItem="Ul5-L8-WKj" secondAttribute="bottom" constant="30" id="0XM-dZ-Evu"/>
+                            <constraint firstItem="Lhe-Kf-HPD" firstAttribute="trailing" secondItem="YvQ-4G-cQU" secondAttribute="trailing" constant="20" id="ASx-AJ-6in"/>
+                            <constraint firstItem="YvQ-4G-cQU" firstAttribute="top" secondItem="UQZ-hL-c7x" secondAttribute="bottom" constant="10" id="FWR-t6-tfG"/>
+                            <constraint firstItem="NvA-Y6-HIt" firstAttribute="bottom" secondItem="Lhe-Kf-HPD" secondAttribute="bottom" id="dlc-aa-oie"/>
+                            <constraint firstItem="Ul5-L8-WKj" firstAttribute="centerX" secondItem="Z6n-iO-h8v" secondAttribute="centerX" id="e6H-Wx-dy7"/>
+                            <constraint firstItem="NvA-Y6-HIt" firstAttribute="leading" secondItem="Lhe-Kf-HPD" secondAttribute="leading" constant="20" id="fad-Iu-iEd"/>
+                            <constraint firstItem="Lhe-Kf-HPD" firstAttribute="trailing" secondItem="NvA-Y6-HIt" secondAttribute="trailing" constant="20" id="k94-WV-qVH"/>
+                            <constraint firstItem="Ul5-L8-WKj" firstAttribute="top" secondItem="Lhe-Kf-HPD" secondAttribute="top" constant="60" id="kQY-qv-hD6"/>
+                            <constraint firstItem="UQZ-hL-c7x" firstAttribute="leading" secondItem="Lhe-Kf-HPD" secondAttribute="leading" constant="20" id="oCa-Yt-f64"/>
+                            <constraint firstItem="YvQ-4G-cQU" firstAttribute="leading" secondItem="Lhe-Kf-HPD" secondAttribute="leading" constant="20" id="zbX-Yf-yaj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="강아지를 등록하세요" id="Liq-nw-iAZ">
+                        <barButtonItem key="backBarButtonItem" title="강아지등록" id="ZKt-KR-EOs"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dogImageView" destination="Ul5-L8-WKj" id="xMj-07-QVA"/>
+                        <outlet property="dogNameTextField" destination="YvQ-4G-cQU" id="zCQ-nn-RtB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HOb-aU-gRY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="rgo-S2-GZN">
+                    <connections>
+                        <action selector="dogImageViewTapped:" destination="2fc-Zj-ZHc" id="qqi-Oq-5QM"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2639.130434782609" y="608.70535714285711"/>
+        </scene>
+        <!--가족 이름을 입력하세요-->
+        <scene sceneID="8l4-4Z-A5u">
+            <objects>
+                <viewController id="T5c-sR-CQe" customClass="FamilyRegistrationViewController" customModule="Dogfood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nCx-Ym-Nln">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIc-ab-U54">
+                                <rect key="frame" x="20" y="812" width="374" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gnF-UB-MJ6"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="jCB-FD-hHf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="2fc-Zj-ZHc" kind="show" id="GF4-yk-xHO"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="만식이네" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lP5-1M-pXr">
+                                <rect key="frame" x="20" y="189" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8t4-uE-VbI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="T5c-sR-CQe" id="1iQ-oC-Jbl"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="함께하는 가족의 이름을 정해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgC-Y4-RiO">
+                                <rect key="frame" x="20" y="148" width="239" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sGE-1R-cbm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fgC-Y4-RiO" firstAttribute="top" secondItem="sGE-1R-cbm" secondAttribute="top" constant="60" id="47H-z5-foQ"/>
+                            <constraint firstItem="lP5-1M-pXr" firstAttribute="top" secondItem="fgC-Y4-RiO" secondAttribute="bottom" constant="20" id="5ms-nY-O6W"/>
+                            <constraint firstItem="sGE-1R-cbm" firstAttribute="trailing" secondItem="lP5-1M-pXr" secondAttribute="trailing" constant="20" id="9bh-z3-zNw"/>
+                            <constraint firstItem="PIc-ab-U54" firstAttribute="bottom" secondItem="sGE-1R-cbm" secondAttribute="bottom" id="SaM-PN-AZR"/>
+                            <constraint firstItem="sGE-1R-cbm" firstAttribute="trailing" secondItem="PIc-ab-U54" secondAttribute="trailing" constant="20" id="ShT-UV-y1C"/>
+                            <constraint firstItem="fgC-Y4-RiO" firstAttribute="leading" secondItem="sGE-1R-cbm" secondAttribute="leading" constant="20" id="Zck-v3-dWl"/>
+                            <constraint firstItem="lP5-1M-pXr" firstAttribute="leading" secondItem="sGE-1R-cbm" secondAttribute="leading" constant="20" id="fMV-YT-JHG"/>
+                            <constraint firstItem="PIc-ab-U54" firstAttribute="leading" secondItem="sGE-1R-cbm" secondAttribute="leading" constant="20" id="odN-jY-idb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="가족 이름을 입력하세요" id="UDd-Mx-uyb">
+                        <barButtonItem key="backBarButtonItem" title="가족 이름" id="WO2-dL-Ogl"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="familyNameTextField" destination="lP5-1M-pXr" id="4Ir-Mf-b0f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KN3-K4-ne3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1639.1304347826087" y="608.70535714285711"/>
+        </scene>
+        <!--초대코드 입력하기-->
+        <scene sceneID="ayh-m3-6JK">
+            <objects>
+                <viewController id="zdb-v5-ch5" customClass="InvitationViewController" customModule="Dogfood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0HZ-8u-301">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3t-lC-PrW">
+                                <rect key="frame" x="20" y="812" width="374" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bYg-3p-qA6"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="vTh-Ba-oV7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="NIx-ow-WEr" kind="show" id="jRX-3E-haP"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lt5-Fg-fII">
+                                <rect key="frame" x="20" y="189" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="s1N-Xs-sHE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zdb-v5-ch5" id="f8e-m8-ELm"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가족에게 받은 초대 코드를 입력해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLn-qb-qhS">
+                                <rect key="frame" x="20" y="148" width="272" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BlV-QR-8nC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lt5-Fg-fII" firstAttribute="top" secondItem="SLn-qb-qhS" secondAttribute="bottom" constant="20" id="0th-IF-ajD"/>
+                            <constraint firstItem="BlV-QR-8nC" firstAttribute="trailing" secondItem="Lt5-Fg-fII" secondAttribute="trailing" constant="20" id="4TL-xr-3Et"/>
+                            <constraint firstItem="P3t-lC-PrW" firstAttribute="bottom" secondItem="BlV-QR-8nC" secondAttribute="bottom" id="BxX-Vi-naa"/>
+                            <constraint firstItem="Lt5-Fg-fII" firstAttribute="leading" secondItem="BlV-QR-8nC" secondAttribute="leading" constant="20" id="If2-uA-GFy"/>
+                            <constraint firstItem="BlV-QR-8nC" firstAttribute="trailing" secondItem="P3t-lC-PrW" secondAttribute="trailing" constant="20" id="Lcw-C4-AqN"/>
+                            <constraint firstItem="SLn-qb-qhS" firstAttribute="top" secondItem="BlV-QR-8nC" secondAttribute="top" constant="60" id="Lfb-xK-PlC"/>
+                            <constraint firstItem="P3t-lC-PrW" firstAttribute="leading" secondItem="BlV-QR-8nC" secondAttribute="leading" constant="20" id="Zqq-Iw-o4f"/>
+                            <constraint firstItem="SLn-qb-qhS" firstAttribute="leading" secondItem="BlV-QR-8nC" secondAttribute="leading" constant="20" id="xAQ-T1-wki"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="초대코드 입력하기" id="giH-xD-rBB">
+                        <barButtonItem key="backBarButtonItem" title="초대코드" id="487-RS-PG0"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="invitationCodeTextField" destination="Lt5-Fg-fII" id="lGG-kV-jZ2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uka-en-7C7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1639.1304347826087" y="-320.08928571428572"/>
+        </scene>
+        <!--사용자를 등록하세요.-->
+        <scene sceneID="jdn-HV-Gvp">
+            <objects>
+                <viewController id="NIx-ow-WEr" customClass="UserRegistrationViewController" customModule="Dogfood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sip-Eb-83q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDd-8U-Cqw">
+                                <rect key="frame" x="20" y="812" width="374" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DWI-fZ-gco"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="userDefault" translatesAutoresizingMaskIntoConstraints="NO" id="ijn-Yx-Elo">
+                                <rect key="frame" x="87" y="147" width="240" height="240"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="JY8-nx-VhV"/>
+                                    <constraint firstAttribute="height" constant="240" id="ils-U9-Mzl"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="JpF-ES-l4p" appends="YES" id="hcm-OX-uqc"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="완숙" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZJM-rQ-7pE">
+                                <rect key="frame" x="20" y="445" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QiA-Dv-St0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="NIx-ow-WEr" id="5AM-Fo-tUl"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAb-mJ-lic">
+                                <rect key="frame" x="20" y="418" width="24.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Cah-77-WPu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZJM-rQ-7pE" firstAttribute="top" secondItem="zAb-mJ-lic" secondAttribute="bottom" constant="10" id="Czn-7d-GTH"/>
+                            <constraint firstItem="Cah-77-WPu" firstAttribute="trailing" secondItem="ZJM-rQ-7pE" secondAttribute="trailing" constant="20" id="EBv-EE-HCj"/>
+                            <constraint firstItem="Cah-77-WPu" firstAttribute="trailing" secondItem="pDd-8U-Cqw" secondAttribute="trailing" constant="20" id="KcW-Zl-43k"/>
+                            <constraint firstItem="zAb-mJ-lic" firstAttribute="leading" secondItem="Cah-77-WPu" secondAttribute="leading" constant="20" id="Vd8-Vr-bmE"/>
+                            <constraint firstItem="ijn-Yx-Elo" firstAttribute="top" secondItem="Cah-77-WPu" secondAttribute="top" constant="60" id="dEa-Be-8Xr"/>
+                            <constraint firstItem="pDd-8U-Cqw" firstAttribute="leading" secondItem="Cah-77-WPu" secondAttribute="leading" constant="20" id="f0Z-x4-P3D"/>
+                            <constraint firstItem="ijn-Yx-Elo" firstAttribute="centerX" secondItem="Sip-Eb-83q" secondAttribute="centerX" id="rnB-f7-1Zq"/>
+                            <constraint firstItem="zAb-mJ-lic" firstAttribute="top" secondItem="ijn-Yx-Elo" secondAttribute="bottom" constant="30" id="s9D-5w-tCn"/>
+                            <constraint firstItem="ZJM-rQ-7pE" firstAttribute="leading" secondItem="Cah-77-WPu" secondAttribute="leading" constant="20" id="tl5-to-Zrw"/>
+                            <constraint firstItem="pDd-8U-Cqw" firstAttribute="bottom" secondItem="Cah-77-WPu" secondAttribute="bottom" id="z7R-gP-WcG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="사용자를 등록하세요." id="55N-2U-bZc"/>
+                    <connections>
+                        <outlet property="userImageView" destination="ijn-Yx-Elo" id="cvM-Gp-Dd5"/>
+                        <outlet property="userNameTextField" destination="ZJM-rQ-7pE" id="HPJ-V2-0cS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Js3-sb-gAm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="JpF-ES-l4p">
+                    <connections>
+                        <action selector="userImageViewTapped:" destination="NIx-ow-WEr" id="v7C-LA-eKA"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3671.0144927536235" y="124.55357142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DEf-AR-KmW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="swV-HJ-JlB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rgh-1Y-3Fq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="DXC-Q8-QZr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="utg-9J-1fa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-210.1449275362319" y="124.55357142857142"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="3lF-OM-CaA"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="dogDefault" width="456" height="444"/>
+        <image name="userDefault" width="460" height="460"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
