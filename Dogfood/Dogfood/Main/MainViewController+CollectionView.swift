@@ -56,18 +56,18 @@ extension MainViewController: UICollectionViewDelegate , UICollectionViewDelegat
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: feedId, for: indexPath) as! feedCell
             
             if indexPath.section == 0 && indexPath.item == 0 {
-                cell.feed = Feed(image: "plus", time: nil)
+//                cell.feed = Feed(image: "plus", time: nil)
                 return cell
             }
             
             if indexPath.section == 1 && indexPath.item == 2 {
-                cell.feed = Feed(image: "more", time: nil)
+//                cell.feed = Feed(image: "more", time: nil)
                 return cell
             }
             
             let idx = indexPath.item + indexPath.section*3 - 1
             
-            cell.feed = idx >= feedLogs.count ? Feed(image: "", time: nil) : feedLogs[idx]
+//            cell.feed = idx >= feedLogs.count ? Feed(image: "", time: nil) : feedLogs[idx]
                                                 
             return cell
         }

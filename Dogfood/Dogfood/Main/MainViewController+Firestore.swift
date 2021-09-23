@@ -32,7 +32,7 @@ extension MainViewController {
             members?.forEach({ info in
                 let img = info["image"] as? String ?? ""
                 let name = info["name"] as? String ?? "user"
-                self.members.append(User(familyCode: familyCode, img: img, name: name))
+                self.members.append(User(imgStr: img, name: name))
             })
             
             dog = (Snapshot?.get("Dogs") as? [Int] ?? []).first ?? 1
@@ -48,7 +48,7 @@ extension MainViewController {
             logs.forEach { log in
                 let img = log["icon"] as? String ?? "food1"
                 let time = log["time"] as? Timestamp
-                self.feedLogs.append(Feed(image: img, time: time?.dateValue()))
+//                self.feedLogs.append(Feed(image: img, time: time?.dateValue()))
             }
             
             self.feedCollectionView.reloadData()
