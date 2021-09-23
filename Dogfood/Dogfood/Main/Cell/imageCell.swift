@@ -8,11 +8,18 @@
 import UIKit
 
 class imageCell: UICollectionViewCell {
+    
+    var image:UIImage? {
+        didSet{
+            self.profile.image = image
+            self.profile.layer.cornerRadius = 20
+        }
+    }
 
     @IBOutlet weak var profile: UIImageView!
     
     override func awakeFromNib() {
-        self.profile.layer.cornerRadius = 20
+        
     }
 
 }

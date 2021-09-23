@@ -45,6 +45,7 @@ class MainViewController: UIViewController {
     
     func layoutSet() {
         self.dogProfile.layer.cornerRadius = 75
+        self.dogProfile.image = UIImage(named: "dog")!
     }
     
     func collectionViewSet() {

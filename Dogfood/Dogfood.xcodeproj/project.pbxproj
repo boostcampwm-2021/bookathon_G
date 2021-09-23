@@ -22,6 +22,8 @@
 		FFD9D64A26FC6C130079500E /* imageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D64826FC6C130079500E /* imageCell.xib */; };
 		FFD9D64D26FC737F0079500E /* feedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D64B26FC737F0079500E /* feedCell.swift */; };
 		FFD9D64E26FC737F0079500E /* feedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D64C26FC737F0079500E /* feedCell.xib */; };
+		FFD9D65126FC7BFB0079500E /* Popup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D65026FC7BFB0079500E /* Popup.storyboard */; };
+		FFD9D65326FC7CA10079500E /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D65226FC7CA10079500E /* PopupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		FFD9D64826FC6C130079500E /* imageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = imageCell.xib; sourceTree = "<group>"; };
 		FFD9D64B26FC737F0079500E /* feedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feedCell.swift; sourceTree = "<group>"; };
 		FFD9D64C26FC737F0079500E /* feedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = feedCell.xib; sourceTree = "<group>"; };
+		FFD9D65026FC7BFB0079500E /* Popup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popup.storyboard; sourceTree = "<group>"; };
+		FFD9D65226FC7CA10079500E /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 		FFD9D63726FC5A8E0079500E /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				FFD9D64F26FC7BF10079500E /* Popup */,
 				FFD9D63C26FC63C50079500E /* Cell */,
 				FFD9D63826FC5AFE0079500E /* main.storyboard */,
 				FFD9D63A26FC5ED40079500E /* MainViewController.swift */,
@@ -129,6 +134,15 @@
 				FFD9D64C26FC737F0079500E /* feedCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		FFD9D64F26FC7BF10079500E /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				FFD9D65026FC7BFB0079500E /* Popup.storyboard */,
+				FFD9D65226FC7CA10079500E /* PopupViewController.swift */,
+			);
+			path = Popup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +210,7 @@
 				FFD9D62E26FC55E90079500E /* LaunchScreen.storyboard in Resources */,
 				FFD9D62B26FC55E90079500E /* Assets.xcassets in Resources */,
 				FFD9D62926FC55E50079500E /* Main.storyboard in Resources */,
+				FFD9D65126FC7BFB0079500E /* Popup.storyboard in Resources */,
 				FFD9D63626FC567C0079500E /* GoogleService-Info.plist in Resources */,
 				FFD9D64E26FC737F0079500E /* feedCell.xib in Resources */,
 			);
@@ -257,6 +272,7 @@
 				FFD9D62426FC55E50079500E /* SceneDelegate.swift in Sources */,
 				FFD9D63B26FC5ED40079500E /* MainViewController.swift in Sources */,
 				FFD9D64926FC6C130079500E /* imageCell.swift in Sources */,
+				FFD9D65326FC7CA10079500E /* PopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
