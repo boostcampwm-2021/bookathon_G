@@ -6,7 +6,8 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseFirestore
+
 
 class EtcTableViewController: UITableViewController {
     
@@ -21,7 +22,8 @@ class EtcTableViewController: UITableViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let db = Firestore.firestore()
+        print(db.collection("Dogs").document("1"))
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
