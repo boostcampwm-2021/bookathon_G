@@ -17,7 +17,15 @@ class MainViewController: UIViewController {
     let CellId = "imageCell"
     let feedId = "feedCell"
     var feedLogs:[Feed] = []
-
+    var members:[User] = []
+    var userIdx:String {
+        let idx = UserDefaults.standard.integer(forKey: "userIdx") ?? 1
+        return String(1)
+    }
+    var user:User?
+    var dogname:String = ""
+    var dogImg: String = ""
+    
     //MARK: - IBOutlets
     
     @IBOutlet weak var dogProfile: UIImageView!
@@ -25,8 +33,6 @@ class MainViewController: UIViewController {
     @IBOutlet weak var familyCollectionView: UICollectionView!
     @IBOutlet weak var feedCollectionView: UICollectionView!
     
-    
-    //MARK: -IBActions
     
     //MARK: - LifeCycles
     
@@ -36,9 +42,9 @@ class MainViewController: UIViewController {
         navigationSet()
         layoutSet()
         collectionViewSet()
+        addSnapshitListener()
         
     }
-    
     
     //MARK: - Helpers
     

@@ -7,11 +7,7 @@
 
 import UIKit
 
-struct Feed {
-    let image:String
-    let time:Date?
-    let color:UIColor
-}
+
 
 class feedCell: UICollectionViewCell {
 

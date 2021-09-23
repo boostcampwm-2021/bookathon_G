@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-struct Log {
+struct Feed {
     let image:String
+    let time:Date?
     let color:UIColor
-    let time:Date
 }

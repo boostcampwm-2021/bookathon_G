@@ -31,8 +31,11 @@
 		FFD9D65A26FCA2930079500E /* foodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D65826FCA2930079500E /* foodCell.swift */; };
 		FFD9D65B26FCA2930079500E /* foodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D65926FCA2930079500E /* foodCell.xib */; };
 		FFD9D65F26FCA5C10079500E /* MainViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D65E26FCA5C10079500E /* MainViewController+Extension.swift */; };
-		FFD9D66226FCA6A80079500E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D66126FCA6A80079500E /* Log.swift */; };
+		FFD9D66226FCA6A80079500E /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D66126FCA6A80079500E /* Feed.swift */; };
 		FFD9D66526FCA7BC0079500E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D66426FCA7BC0079500E /* Date+Extension.swift */; };
+		FFD9D66726FCAB8B0079500E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D66626FCAB8B0079500E /* Config.swift */; };
+		FFD9D66926FCAD110079500E /* MainViewController+Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D66826FCAD110079500E /* MainViewController+Firestore.swift */; };
+		FFD9D66B26FCB02B0079500E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D66A26FCB02B0079500E /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,8 +67,11 @@
 		FFD9D65826FCA2930079500E /* foodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodCell.swift; sourceTree = "<group>"; };
 		FFD9D65926FCA2930079500E /* foodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = foodCell.xib; sourceTree = "<group>"; };
 		FFD9D65E26FCA5C10079500E /* MainViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Extension.swift"; sourceTree = "<group>"; };
-		FFD9D66126FCA6A80079500E /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		FFD9D66126FCA6A80079500E /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		FFD9D66426FCA7BC0079500E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		FFD9D66626FCAB8B0079500E /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		FFD9D66826FCAD110079500E /* MainViewController+Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Firestore.swift"; sourceTree = "<group>"; };
+		FFD9D66A26FCB02B0079500E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,7 @@
 				FFD9D63A26FC5ED40079500E /* MainViewController.swift */,
 				FFD9D64526FC65B30079500E /* MainViewController+CollectionView.swift */,
 				FFD9D65E26FCA5C10079500E /* MainViewController+Extension.swift */,
+				FFD9D66826FCAD110079500E /* MainViewController+Firestore.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -191,7 +198,9 @@
 		FFD9D66026FCA6A20079500E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FFD9D66126FCA6A80079500E /* Log.swift */,
+				FFD9D66126FCA6A80079500E /* Feed.swift */,
+				FFD9D66626FCAB8B0079500E /* Config.swift */,
+				FFD9D66A26FCB02B0079500E /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -332,12 +341,15 @@
 				FFD9D62226FC55E50079500E /* AppDelegate.swift in Sources */,
 				DD3CB51126FC6863004AEF7B /* EtcTableViewController.swift in Sources */,
 				FFD9D66526FCA7BC0079500E /* Date+Extension.swift in Sources */,
+				FFD9D66926FCAD110079500E /* MainViewController+Firestore.swift in Sources */,
 				FFD9D62426FC55E50079500E /* SceneDelegate.swift in Sources */,
+				FFD9D66726FCAB8B0079500E /* Config.swift in Sources */,
 				FFD9D63B26FC5ED40079500E /* MainViewController.swift in Sources */,
 				FFD9D64926FC6C130079500E /* imageCell.swift in Sources */,
 				FFD9D65326FC7CA10079500E /* PopupViewController.swift in Sources */,
-				FFD9D66226FCA6A80079500E /* Log.swift in Sources */,
+				FFD9D66226FCA6A80079500E /* Feed.swift in Sources */,
 				FFD9D65A26FCA2930079500E /* foodCell.swift in Sources */,
+				FFD9D66B26FCB02B0079500E /* User.swift in Sources */,
 				DD3CB51626FC7B9F004AEF7B /* Logs.swift in Sources */,
 				DD3CB51326FC6968004AEF7B /* EtcTableViewCell.swift in Sources */,
 				FFD9D65F26FCA5C10079500E /* MainViewController+Extension.swift in Sources */,
