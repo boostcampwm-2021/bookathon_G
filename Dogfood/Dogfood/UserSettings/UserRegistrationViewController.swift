@@ -37,6 +37,12 @@ class UserRegistrationViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     
+    @IBAction func moveNext(_ sender: Any) {
+        let mainVC = UIStoryboard(name: "main", bundle: nil).instantiateViewController(withIdentifier: "main")
+        self.view.window?.rootViewController = UINavigationController(rootViewController: mainVC)
+    }
+    
+    
 }
 
 extension UserRegistrationViewController: UITextFieldDelegate {
