@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		295C614789445E9EA40DEC4E /* Pods_Dogfood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCD15804BF4F735D96B9338 /* Pods_Dogfood.framework */; };
 		FFD9D62226FC55E50079500E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D62126FC55E50079500E /* AppDelegate.swift */; };
 		FFD9D62426FC55E50079500E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D62326FC55E50079500E /* SceneDelegate.swift */; };
 		FFD9D62626FC55E50079500E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D62526FC55E50079500E /* ViewController.swift */; };
 		FFD9D62926FC55E50079500E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D62726FC55E50079500E /* Main.storyboard */; };
 		FFD9D62B26FC55E90079500E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D62A26FC55E90079500E /* Assets.xcassets */; };
 		FFD9D62E26FC55E90079500E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D62C26FC55E90079500E /* LaunchScreen.storyboard */; };
+		FFD9D63626FC567C0079500E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D63526FC567C0079500E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E756356BE3253842A20C05C /* Pods-Dogfood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dogfood.release.xcconfig"; path = "Target Support Files/Pods-Dogfood/Pods-Dogfood.release.xcconfig"; sourceTree = "<group>"; };
+		AFCD15804BF4F735D96B9338 /* Pods_Dogfood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dogfood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA8D8ADF0275471DD8A1668 /* Pods-Dogfood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dogfood.debug.xcconfig"; path = "Target Support Files/Pods-Dogfood/Pods-Dogfood.debug.xcconfig"; sourceTree = "<group>"; };
 		FFD9D61E26FC55E50079500E /* Dogfood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dogfood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD9D62126FC55E50079500E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD9D62326FC55E50079500E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		FFD9D62A26FC55E90079500E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFD9D62D26FC55E90079500E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFD9D62F26FC55E90079500E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFD9D63526FC567C0079500E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				295C614789445E9EA40DEC4E /* Pods_Dogfood.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57EE8FACC9284A978FFAD44B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFCD15804BF4F735D96B9338 /* Pods_Dogfood.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF3E3D856A45BD376E552335 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8D8ADF0275471DD8A1668 /* Pods-Dogfood.debug.xcconfig */,
+				6E756356BE3253842A20C05C /* Pods-Dogfood.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FFD9D61526FC55E50079500E = {
 			isa = PBXGroup;
 			children = (
 				FFD9D62026FC55E50079500E /* Dogfood */,
 				FFD9D61F26FC55E50079500E /* Products */,
+				CF3E3D856A45BD376E552335 /* Pods */,
+				57EE8FACC9284A978FFAD44B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +90,7 @@
 				FFD9D62A26FC55E90079500E /* Assets.xcassets */,
 				FFD9D62C26FC55E90079500E /* LaunchScreen.storyboard */,
 				FFD9D62F26FC55E90079500E /* Info.plist */,
+				FFD9D63526FC567C0079500E /* GoogleService-Info.plist */,
 			);
 			path = Dogfood;
 			sourceTree = "<group>";
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFD9D63226FC55E90079500E /* Build configuration list for PBXNativeTarget "Dogfood" */;
 			buildPhases = (
+				90FA403C4100439F6F5F3CE6 /* [CP] Check Pods Manifest.lock */,
 				FFD9D61A26FC55E50079500E /* Sources */,
 				FFD9D61B26FC55E50079500E /* Frameworks */,
 				FFD9D61C26FC55E50079500E /* Resources */,
+				3397DE4D43B0C7DCE074EA14 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,10 +158,53 @@
 				FFD9D62E26FC55E90079500E /* LaunchScreen.storyboard in Resources */,
 				FFD9D62B26FC55E90079500E /* Assets.xcassets in Resources */,
 				FFD9D62926FC55E50079500E /* Main.storyboard in Resources */,
+				FFD9D63626FC567C0079500E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3397DE4D43B0C7DCE074EA14 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dogfood/Pods-Dogfood-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dogfood/Pods-Dogfood-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dogfood/Pods-Dogfood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90FA403C4100439F6F5F3CE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dogfood-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FFD9D61A26FC55E50079500E /* Sources */ = {
@@ -284,6 +357,7 @@
 		};
 		FFD9D63326FC55E90079500E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDA8D8ADF0275471DD8A1668 /* Pods-Dogfood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +385,7 @@
 		};
 		FFD9D63426FC55E90079500E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E756356BE3253842A20C05C /* Pods-Dogfood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
