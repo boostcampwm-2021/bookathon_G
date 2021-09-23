@@ -8,4 +8,6 @@ target 'Dogfood' do
   # Pods for Dogfood
 
   pod 'Firebase/Analytics'
+  pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
 end
