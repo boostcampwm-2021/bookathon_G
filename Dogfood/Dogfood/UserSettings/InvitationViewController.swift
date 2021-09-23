@@ -6,31 +6,70 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class InvitationViewController: UIViewController {
 
-    @IBOutlet weak var invitationCodeTextField: UITextField!
+    @IBOutlet weak var invitationFamilyNameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.invitationFamilyNameTextField.addLeftView(width: 10)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setNavigationController()
+    }
+    
+    // Mark - helper functions
+    
+    private func setNavigationController() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.invitationCodeTextField.frame.height))
-        
-        self.invitationCodeTextField.leftView = paddingView
-        self.invitationCodeTextField.leftViewMode = .always
+        self.navigationController?.navigationBar.topItem?.title = "가족 이름를 입력해주세요"
+        self.navigationController?.navigationBar.backItem?.title = "가족 이름 입력"
     }
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.invitationCodeTextField.resignFirstResponder()
+        self.invitationFamilyNameTextField.resignFirstResponder()
     }
     
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        // 초대코드 userDefault
+        
+        guard let familyName = self.invitationFamilyNameTextField.text else {
+            return
+        }
+        
+        Collection.familyCollection.document(familyName).getDocument { (document, error) in
+            print(document?.data())
+            if document?.data() != nil {
+                UserDefaults.standard.set(familyName, forKey: "familyCode")
+                let UserRegistraionViewController = UIStoryboard(name: "UserSettings", bundle: nil).instantiateViewController(withIdentifier: "UserRegistraionViewController")
+                
+                self.navigationController?.pushViewController(UserRegistraionViewController, animated: true)
+            } else {
+                // alert 띄우기
+            }
+        }
+//
+//        Collection.familyCollection.document(familyName).setData([
+//            "Dogs": [],
+//            "members": []
+//                                                      ])
+//
+//        UserDefaults.standard.set(familyName, forKey: "familyCode")
+        
+//        let UserRegistraionViewController = UIStoryboard(name: "UserSettings", bundle: nil).instantiateViewController(withIdentifier: "UserRegistraionViewController")
+//
+//        self.navigationController?.pushViewController(UserRegistraionViewController, animated: true)
+    }
 }
 
 
 extension InvitationViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.invitationCodeTextField.resignFirstResponder()
+        self.invitationFamilyNameTextField.resignFirstResponder()
         return true
     }
 }

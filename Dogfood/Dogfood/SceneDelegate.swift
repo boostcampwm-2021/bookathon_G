@@ -15,20 +15,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let _ = (scene as? UIWindowScene) else { return }
-        
-        if let _ = UserDefaults.standard.string(forKey: "familyCode") ,
-           let _ = UserDefaults.standard.string(forKey: "userName"){
-            
-            let rootVC = UIStoryboard(name: "main", bundle: nil).instantiateViewController(withIdentifier: "main")
-            window?.rootViewController = UINavigationController(rootViewController: rootVC)
-            window?.makeKeyAndVisible()
-            
-        }else{
-            let rootVC = UIStoryboard(name: "UserSettings", bundle: nil).instantiateViewController(withIdentifier: "SelectViewController")
-            window?.rootViewController = UINavigationController(rootViewController: rootVC)
-            window?.makeKeyAndVisible()
-        }
-       
+//        
+//        if let _ = UserDefaults.standard.string(forKey: "familyCode") ,
+//           let _ = UserDefaults.standard.string(forKey: "userName"){
+//            
+//            let rootVC = UIStoryboard(name: "main", bundle: nil).instantiateViewController(withIdentifier: "main")
+//            window?.rootViewController = UINavigationController(rootViewController: rootVC)
+//            window?.makeKeyAndVisible()
+//            
+//        }else{
+//            let rootVC = UIStoryboard(name: "UserSettings", bundle: nil).instantiateViewController(withIdentifier: "SelectViewController")
+//            window?.rootViewController = UINavigationController(rootViewController: rootVC)
+//            window?.makeKeyAndVisible()
+//        }
+        let rootVC = UIStoryboard(name: "UserSettings", bundle: nil).instantiateViewController(withIdentifier: "SelectViewController")
+        window?.rootViewController = UINavigationController(rootViewController: rootVC)
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
