@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController restorationIdentifier="main" storyboardIdentifier="main" id="Y6W-OH-hqX" customClass="MainViewController" customModule="Dogfood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i9m-lA-1kh">
+                                <rect key="frame" x="132" y="74" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="iEH-MD-vC6"/>
+                                    <constraint firstAttribute="height" constant="150" id="uyk-1w-Cv7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="까미" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPN-zv-E1b">
+                                <rect key="frame" x="189.5" y="234" width="35" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wdF-cq-FDU">
+                                <rect key="frame" x="0.0" y="278" width="414" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="dZo-Lz-YUf"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ude-JL-qxI">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Ni-4S-GAq">
+                                <rect key="frame" x="0.0" y="368" width="414" height="494"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="494" id="sqT-5N-ANC"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xam-qR-Lyj">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aPN-zv-E1b" firstAttribute="top" secondItem="i9m-lA-1kh" secondAttribute="bottom" constant="10" id="7Bc-kT-1dA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="4Ni-4S-GAq" secondAttribute="bottom" id="AgO-hi-Qii"/>
+                            <constraint firstItem="i9m-lA-1kh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="BPs-xD-EV2"/>
+                            <constraint firstItem="aPN-zv-E1b" firstAttribute="centerX" secondItem="i9m-lA-1kh" secondAttribute="centerX" id="Hg4-0x-awT"/>
+                            <constraint firstItem="wdF-cq-FDU" firstAttribute="top" secondItem="aPN-zv-E1b" secondAttribute="bottom" constant="20" id="JmY-NS-CxO"/>
+                            <constraint firstItem="i9m-lA-1kh" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="LOA-hb-MxN"/>
+                            <constraint firstItem="wdF-cq-FDU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="czS-ck-tQm"/>
+                            <constraint firstItem="4Ni-4S-GAq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gmN-Yp-NKc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4Ni-4S-GAq" secondAttribute="trailing" id="oSI-ID-VCV"/>
+                            <constraint firstItem="4Ni-4S-GAq" firstAttribute="top" secondItem="wdF-cq-FDU" secondAttribute="bottom" constant="20" id="qXa-3H-E30"/>
+                            <constraint firstItem="wdF-cq-FDU" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="tbd-R8-y9k"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BdM-p2-5Ij"/>
+                    <connections>
+                        <outlet property="dogName" destination="aPN-zv-E1b" id="PWx-cv-3hn"/>
+                        <outlet property="dogProfile" destination="i9m-lA-1kh" id="zPV-ef-cM7"/>
+                        <outlet property="familyCollectionView" destination="wdF-cq-FDU" id="6oN-kB-NCg"/>
+                        <outlet property="feedCollectionView" destination="4Ni-4S-GAq" id="T33-0f-AQl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

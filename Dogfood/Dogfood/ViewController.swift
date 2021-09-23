@@ -13,7 +13,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func move(_ sender: Any) {
+        let vc = UIStoryboard(name: "main", bundle: nil).instantiateViewController(withIdentifier: "main")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 
 }
 

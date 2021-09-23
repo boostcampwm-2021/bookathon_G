@@ -15,6 +15,13 @@
 		FFD9D62B26FC55E90079500E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D62A26FC55E90079500E /* Assets.xcassets */; };
 		FFD9D62E26FC55E90079500E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D62C26FC55E90079500E /* LaunchScreen.storyboard */; };
 		FFD9D63626FC567C0079500E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D63526FC567C0079500E /* GoogleService-Info.plist */; };
+		FFD9D63926FC5AFE0079500E /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D63826FC5AFE0079500E /* main.storyboard */; };
+		FFD9D63B26FC5ED40079500E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D63A26FC5ED40079500E /* MainViewController.swift */; };
+		FFD9D64626FC65B30079500E /* MainViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D64526FC65B30079500E /* MainViewController+CollectionView.swift */; };
+		FFD9D64926FC6C130079500E /* imageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D64726FC6C130079500E /* imageCell.swift */; };
+		FFD9D64A26FC6C130079500E /* imageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D64826FC6C130079500E /* imageCell.xib */; };
+		FFD9D64D26FC737F0079500E /* feedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D64B26FC737F0079500E /* feedCell.swift */; };
+		FFD9D64E26FC737F0079500E /* feedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D64C26FC737F0079500E /* feedCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +37,13 @@
 		FFD9D62D26FC55E90079500E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFD9D62F26FC55E90079500E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFD9D63526FC567C0079500E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FFD9D63826FC5AFE0079500E /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		FFD9D63A26FC5ED40079500E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FFD9D64526FC65B30079500E /* MainViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		FFD9D64726FC6C130079500E /* imageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageCell.swift; sourceTree = "<group>"; };
+		FFD9D64826FC6C130079500E /* imageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = imageCell.xib; sourceTree = "<group>"; };
+		FFD9D64B26FC737F0079500E /* feedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feedCell.swift; sourceTree = "<group>"; };
+		FFD9D64C26FC737F0079500E /* feedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = feedCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +72,6 @@
 				CDA8D8ADF0275471DD8A1668 /* Pods-Dogfood.debug.xcconfig */,
 				6E756356BE3253842A20C05C /* Pods-Dogfood.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,6 +96,7 @@
 		FFD9D62026FC55E50079500E /* Dogfood */ = {
 			isa = PBXGroup;
 			children = (
+				FFD9D63726FC5A8E0079500E /* Main */,
 				FFD9D62126FC55E50079500E /* AppDelegate.swift */,
 				FFD9D62326FC55E50079500E /* SceneDelegate.swift */,
 				FFD9D62526FC55E50079500E /* ViewController.swift */,
@@ -93,6 +107,28 @@
 				FFD9D63526FC567C0079500E /* GoogleService-Info.plist */,
 			);
 			path = Dogfood;
+			sourceTree = "<group>";
+		};
+		FFD9D63726FC5A8E0079500E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FFD9D63C26FC63C50079500E /* Cell */,
+				FFD9D63826FC5AFE0079500E /* main.storyboard */,
+				FFD9D63A26FC5ED40079500E /* MainViewController.swift */,
+				FFD9D64526FC65B30079500E /* MainViewController+CollectionView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FFD9D63C26FC63C50079500E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FFD9D64726FC6C130079500E /* imageCell.swift */,
+				FFD9D64826FC6C130079500E /* imageCell.xib */,
+				FFD9D64B26FC737F0079500E /* feedCell.swift */,
+				FFD9D64C26FC737F0079500E /* feedCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,10 +191,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFD9D63926FC5AFE0079500E /* main.storyboard in Resources */,
+				FFD9D64A26FC6C130079500E /* imageCell.xib in Resources */,
 				FFD9D62E26FC55E90079500E /* LaunchScreen.storyboard in Resources */,
 				FFD9D62B26FC55E90079500E /* Assets.xcassets in Resources */,
 				FFD9D62926FC55E50079500E /* Main.storyboard in Resources */,
 				FFD9D63626FC567C0079500E /* GoogleService-Info.plist in Resources */,
+				FFD9D64E26FC737F0079500E /* feedCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,9 +250,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFD9D64626FC65B30079500E /* MainViewController+CollectionView.swift in Sources */,
+				FFD9D64D26FC737F0079500E /* feedCell.swift in Sources */,
 				FFD9D62626FC55E50079500E /* ViewController.swift in Sources */,
 				FFD9D62226FC55E50079500E /* AppDelegate.swift in Sources */,
 				FFD9D62426FC55E50079500E /* SceneDelegate.swift in Sources */,
+				FFD9D63B26FC5ED40079500E /* MainViewController.swift in Sources */,
+				FFD9D64926FC6C130079500E /* imageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
