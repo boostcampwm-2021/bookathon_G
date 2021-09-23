@@ -12,47 +12,37 @@ import FirebaseFirestore
 extension MainViewController {
     func addSnapshitListener() {
         
-//        Collection.usersCollection.document(userIdx).addSnapshotListener { Snapshot, error in
-//            let familyCode = Snapshot?.get("family_code") as? String ?? "abc"
-//            let img = Snapshot?.get("img") as? String ?? ""
-//            let name = Snapshot?.get("name") as? String ?? "user"
-//
-//            self.user = User(familyCode: familyCode, img: img, name: name)
-//            if error != nil {
-//                print(error)
-//            }
-//        }
-        
-        let familyCode = "abc"
-        var dog:Int = 1
-        
-        Collection.familyCollection.document(familyCode).addSnapshotListener { Snapshot, error in
-            let members = Snapshot?.get("members") as? [[String:Any]]
+        self.snapshot = Collection.familyCollection.document(familyCode).addSnapshotListener { Snapshot, error in
+            self.feedLogs = []
+            self.members = []
+            
+            
             //가족들 정보 넣기
+            let members = Snapshot?.get("members") as? [[String:String]]
             members?.forEach({ info in
-                let img = info["image"] as? String ?? ""
-                let name = info["name"] as? String ?? "user"
+                let img = info["imgStr"] ?? ""
+                let name = info["name"] ?? "user"
                 self.members.append(User(imgStr: img, name: name))
             })
-            
-            dog = (Snapshot?.get("Dogs") as? [Int] ?? []).first ?? 1
-            
-        }
-        
-        Collection.dogsCollection.document(String(dog)).addSnapshotListener { Snapshot, error in
-            
-            self.dogname = Snapshot?.get("name") as? String ?? "dog"
-            self.dogImg =  Snapshot?.get("img") as? String ?? "dog"
-            let logs = Snapshot?.get("Logs") as? [[String:Any]] ?? []
-            
+                        
+            //로그 정보 넣기
+            self.dog = (Snapshot?.get("Dogs") as? [[String:Any]] ?? []).first!
+            self.dogImg = self.dog["imgUrl"] as? String ?? ""
+            self.dogName.text = self.dog["name"] as? String ?? ""
+                        
+            let logs = self.dog["Logs"] as? [[String:Any]] ?? []
             logs.forEach { log in
-                let img = log["icon"] as? String ?? "food1"
+                let foodimg = log["foodImgStr"] as? String ?? "food1"
+                let imgStr = log["imgStr"] as? String ?? "person1"
                 let time = log["time"] as? Timestamp
-//                self.feedLogs.append(Feed(image: img, time: time?.dateValue()))
+                self.feedLogs.append(Log(foodImgStr: foodimg, imgStr: imgStr, time: time?.dateValue() ?? Date() ))
             }
             
+            self.familyCollectionView.reloadData()
             self.feedCollectionView.reloadData()
         }
+    
+        
     }
     
     

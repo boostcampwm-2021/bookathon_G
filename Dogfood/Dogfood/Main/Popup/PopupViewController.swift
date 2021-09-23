@@ -15,8 +15,6 @@ class PopupViewController: UIViewController {
     let cellId = "foodCell"
     let imgs:[String] = ["food1","food2","food3",
                          "food4","food5","food6"]
-    let colors:[UIColor] = [.systemTeal , .systemPink , .systemGray,
-                            .systemFill , .systemCyan , .systemGray2]
     
     //MARK: - IBOutlets
     @IBOutlet weak var backView: UIView!
@@ -70,7 +68,7 @@ extension PopupViewController : UICollectionViewDelegate , UICollectionViewDeleg
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? foodCell else { return UICollectionViewCell() }
         
         let idx = indexPath.item + indexPath.section*3
-        cell.food = Food(image: imgs[idx], color: colors[idx])
+        cell.food = Food(image: imgs[idx], color: FoodInfo(rawValue: imgs[idx])?.color ?? .systemGray)
                 
         return cell
     }
@@ -92,7 +90,7 @@ extension PopupViewController : UICollectionViewDelegate , UICollectionViewDeleg
         
         let idx = indexPath.section*3 + indexPath.item
         self.dismiss(animated: true) {
-            self.delegate?.addFeedData(time: Date(), image: self.imgs[idx], color: self.colors[idx])
+            self.delegate?.addFeedData(time: Date(), image: self.imgs[idx])
         }
                 
     }

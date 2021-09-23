@@ -11,21 +11,20 @@ import UIKit
 
 class feedCell: UICollectionViewCell {
 
-    @IBOutlet weak var profile: UIImageView!
+    @IBOutlet weak var food: UIImageView!
     @IBOutlet weak var time: UILabel!
     
-//    var feed:Feed? {
-//        didSet {
-//            self.profile.image = UIImage(named:  feed!.image)
-//            self.profile.layer.cornerRadius = 55
-//            self.time.text =  feed!.time == nil ? "" : feed?.time!.text
-//            self.profile.backgroundColor = .systemGray
-//        }
-//    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    var log:Log? {
+        didSet {
+            let foodImgStr = log!.foodImgStr 
+            self.food.image = UIImage(named: foodImgStr)
+            self.food.layer.cornerRadius = 55
+            self.time.text = log?.time.text
+            if foodImgStr == "" || foodImgStr == "plus" || foodImgStr == "more" {
+                self.time.text = ""
+            }
+            self.food.backgroundColor = FoodInfo(rawValue: log!.foodImgStr)?.color ?? .systemGray
+        }
+    }        
 
 }

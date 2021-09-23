@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 protocol mainViewDelegate:AnyObject {
-    func addFeedData(time:Date ,image:String ,color:UIColor)
+    func addFeedData(time:Date ,image:String )
 }
 
 class MainViewController: UIViewController {
@@ -16,15 +17,22 @@ class MainViewController: UIViewController {
     //MARK: - Properties
     let CellId = "imageCell"
     let feedId = "feedCell"
-    var feedLogs:[DogLog] = []
+    var feedLogs:[Log] = []
     var members:[User] = []
-    var userIdx:String {
-        let idx = UserDefaults.standard.integer(forKey: "userIdx") ?? 1
-        return String(1)
-    }
     var user:User?
+    var dog:[String:Any] = [:]
     var dogname:String = ""
     var dogImg: String = ""
+    var snapshot:ListenerRegistration?
+    var userName:String {
+        return UserDefaults.standard.string(forKey: "userName") ?? "user"
+    }
+    var familyCode:String {
+        return UserDefaults.standard.string(forKey: "familyCode") ?? "abc"
+    }
+    var userImage:String {
+        return UserDefaults.standard.string(forKey: "userImg") ?? "person1"
+    }
     
     //MARK: - IBOutlets
     

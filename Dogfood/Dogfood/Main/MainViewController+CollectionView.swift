@@ -27,7 +27,7 @@ extension MainViewController: UICollectionViewDelegate , UICollectionViewDelegat
         
         if collectionView == familyCollectionView {
         
-            return 5
+            return self.members.count
             
         }
         
@@ -45,8 +45,8 @@ extension MainViewController: UICollectionViewDelegate , UICollectionViewDelegat
         
         if collectionView == familyCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellId, for: indexPath) as! imageCell
-            
-            cell.image =  UIImage(named: "dog") ?? UIImage()
+            let imgStr = members[indexPath.item].imgStr
+            cell.image = UserInfo(rawValue: imgStr)?.image
             
             return cell
         }
@@ -56,18 +56,18 @@ extension MainViewController: UICollectionViewDelegate , UICollectionViewDelegat
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: feedId, for: indexPath) as! feedCell
             
             if indexPath.section == 0 && indexPath.item == 0 {
-//                cell.feed = Feed(image: "plus", time: nil)
+                cell.log = Log(foodImgStr: "plus", imgStr: "", time: Date())
                 return cell
             }
             
             if indexPath.section == 1 && indexPath.item == 2 {
-//                cell.feed = Feed(image: "more", time: nil)
+                cell.log = Log(foodImgStr: "more", imgStr: "", time: Date())
                 return cell
             }
             
             let idx = indexPath.item + indexPath.section*3 - 1
             
-//            cell.feed = idx >= feedLogs.count ? Feed(image: "", time: nil) : feedLogs[idx]
+            cell.log = idx >= feedLogs.count ? Log(foodImgStr: "", imgStr: "", time: Date()) : feedLogs[idx]
                                                 
             return cell
         }

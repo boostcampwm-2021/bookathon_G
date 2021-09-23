@@ -9,12 +9,29 @@
 
 import Foundation
 import UIKit
-
+import FirebaseFirestore
 
 extension MainViewController :mainViewDelegate {
     
-    func addFeedData(time: Date, image: String, color: UIColor) {
-        self.feedLogs.append(DogLog(imgUrl: "", name: "까미", Logs: []))
+    func addFeedData(time: Date, image: String) {
+        
+        self.feedLogs.append(Log(foodImgStr: image, imgStr: "", time: time))
+        
+        let log:[String:Any] = [
+            "foodImgStr" : image,
+            "imgStr": userImage,
+            "time" : Timestamp(date: time)
+        ]
+        
+        var logs = self.dog["Logs"] as? [[String:Any]] ?? []
+        logs.append(log)
+        self.dog["Logs"] = logs
+        
+        Collection.familyCollection.document(familyCode).updateData([
+            "Dogs" : [self.dog]
+        ]) { error in
+        }
+        
         self.feedCollectionView.reloadData()
         
     }

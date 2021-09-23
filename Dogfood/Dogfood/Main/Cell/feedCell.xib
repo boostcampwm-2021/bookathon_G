@@ -20,28 +20,27 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0UP-uO-b3T">
                         <rect key="frame" x="0.0" y="0.0" width="125" height="152"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="6Ii-1K-JJS">
-                                <rect key="frame" x="0.0" y="0.0" width="125" height="110"/>
-                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="Mhr-Bf-UsC"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCn-aG-ifK">
-                                <rect key="frame" x="41.5" y="114" width="42" height="34"/>
+                                <rect key="frame" x="41.5" y="118" width="42" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IGm-ta-vzN">
+                                <rect key="frame" x="0.0" y="0.0" width="125" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="Ivt-9H-XJn"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hCn-aG-ifK" firstAttribute="top" secondItem="6Ii-1K-JJS" secondAttribute="bottom" constant="4" id="TPT-3C-MhR"/>
-                            <constraint firstItem="hCn-aG-ifK" firstAttribute="centerX" secondItem="6Ii-1K-JJS" secondAttribute="centerX" id="akf-x0-GP3"/>
-                            <constraint firstAttribute="trailing" secondItem="6Ii-1K-JJS" secondAttribute="trailing" id="jBY-bi-vrz"/>
-                            <constraint firstItem="6Ii-1K-JJS" firstAttribute="top" secondItem="0UP-uO-b3T" secondAttribute="top" id="mnU-hi-6sQ"/>
+                            <constraint firstAttribute="trailing" secondItem="IGm-ta-vzN" secondAttribute="trailing" id="7FD-me-ztv"/>
+                            <constraint firstItem="hCn-aG-ifK" firstAttribute="top" secondItem="IGm-ta-vzN" secondAttribute="bottom" constant="8" id="W9m-Xi-tYu"/>
+                            <constraint firstItem="IGm-ta-vzN" firstAttribute="top" secondItem="0UP-uO-b3T" secondAttribute="top" id="dWQ-ef-Up6"/>
+                            <constraint firstItem="hCn-aG-ifK" firstAttribute="centerX" secondItem="IGm-ta-vzN" secondAttribute="centerX" id="e39-L5-e81"/>
                             <constraint firstAttribute="bottom" secondItem="hCn-aG-ifK" secondAttribute="bottom" constant="4" id="qAJ-5T-hyy"/>
-                            <constraint firstItem="6Ii-1K-JJS" firstAttribute="leading" secondItem="0UP-uO-b3T" secondAttribute="leading" id="vWC-fC-Xqy"/>
+                            <constraint firstItem="IGm-ta-vzN" firstAttribute="leading" secondItem="0UP-uO-b3T" secondAttribute="leading" id="yux-FM-qPC"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -55,14 +54,13 @@
             </constraints>
             <size key="customSize" width="125" height="152"/>
             <connections>
-                <outlet property="profile" destination="6Ii-1K-JJS" id="bcu-NL-G7r"/>
+                <outlet property="food" destination="IGm-ta-vzN" id="eJM-Dz-jCm"/>
                 <outlet property="time" destination="hCn-aG-ifK" id="89E-Xc-IXp"/>
             </connections>
             <point key="canvasLocation" x="192.0289855072464" y="147.99107142857142"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="dot" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
