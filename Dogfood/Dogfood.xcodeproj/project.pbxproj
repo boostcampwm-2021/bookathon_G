@@ -17,7 +17,6 @@
 		DD3CB50F26FC5EA3004AEF7B /* Etc.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3CB50E26FC5EA3004AEF7B /* Etc.storyboard */; };
 		DD3CB51126FC6863004AEF7B /* EtcTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3CB51026FC6863004AEF7B /* EtcTableViewController.swift */; };
 		DD3CB51326FC6968004AEF7B /* EtcTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3CB51226FC6968004AEF7B /* EtcTableViewCell.swift */; };
-		DD3CB51626FC7B9F004AEF7B /* Logs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3CB51526FC7B9F004AEF7B /* Logs.swift */; };
 		FFD9D62226FC55E50079500E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D62126FC55E50079500E /* AppDelegate.swift */; };
 		FFD9D62426FC55E50079500E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D62326FC55E50079500E /* SceneDelegate.swift */; };
 		FFD9D62626FC55E50079500E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D62526FC55E50079500E /* ViewController.swift */; };
@@ -58,7 +57,6 @@
 		DD3CB50E26FC5EA3004AEF7B /* Etc.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Etc.storyboard; sourceTree = "<group>"; };
 		DD3CB51026FC6863004AEF7B /* EtcTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtcTableViewController.swift; sourceTree = "<group>"; };
 		DD3CB51226FC6968004AEF7B /* EtcTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtcTableViewCell.swift; sourceTree = "<group>"; };
-		DD3CB51526FC7B9F004AEF7B /* Logs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logs.swift; sourceTree = "<group>"; };
 		FFD9D61E26FC55E50079500E /* Dogfood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dogfood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD9D62126FC55E50079500E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD9D62326FC55E50079500E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,20 +139,11 @@
 		DD3CB50D26FC5E88004AEF7B /* Etc */ = {
 			isa = PBXGroup;
 			children = (
-				DD3CB51426FC7B5C004AEF7B /* Models */,
 				DD3CB50E26FC5EA3004AEF7B /* Etc.storyboard */,
 				DD3CB51026FC6863004AEF7B /* EtcTableViewController.swift */,
 				DD3CB51226FC6968004AEF7B /* EtcTableViewCell.swift */,
 			);
 			path = Etc;
-			sourceTree = "<group>";
-		};
-		DD3CB51426FC7B5C004AEF7B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				DD3CB51526FC7B9F004AEF7B /* Logs.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		FFD9D61526FC55E50079500E = {
@@ -397,7 +386,6 @@
 				FFD9D64926FC6C130079500E /* imageCell.swift in Sources */,
 				FFD9D65326FC7CA10079500E /* PopupViewController.swift in Sources */,
 				250DCD1526FC9AB500F2D0E9 /* FamilyRegistrationViewController.swift in Sources */,
-				DD3CB51626FC7B9F004AEF7B /* Logs.swift in Sources */,
 				DD3CB51326FC6968004AEF7B /* EtcTableViewCell.swift in Sources */,
 				FFD9D65F26FCA5C10079500E /* MainViewController+Extension.swift in Sources */,
 			);

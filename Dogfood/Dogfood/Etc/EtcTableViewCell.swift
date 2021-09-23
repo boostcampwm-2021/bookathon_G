@@ -11,6 +11,7 @@ class EtcTableViewCell: UITableViewCell, UINavigationControllerDelegate {
 
     @IBOutlet var detailEmoji: UILabel!
     @IBOutlet var timeEmoji: UILabel!
+    @IBOutlet weak var userImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
