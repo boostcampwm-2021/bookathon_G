@@ -21,10 +21,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qyo-zp-JnH">
-                                <rect key="frame" x="20" y="348" width="374" height="200"/>
+                                <rect key="frame" x="20" y="338" width="374" height="220"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aee-t1-hTe">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="220"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="hQN-Yl-E4F">
                                             <size key="itemSize" width="128" height="128"/>
@@ -38,7 +38,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="aee-t1-hTe" secondAttribute="trailing" id="ZIw-9L-Y33"/>
-                                    <constraint firstAttribute="height" constant="200" id="jbo-FW-qvc"/>
+                                    <constraint firstAttribute="height" constant="220" id="jbo-FW-qvc"/>
                                     <constraint firstItem="aee-t1-hTe" firstAttribute="top" secondItem="Qyo-zp-JnH" secondAttribute="top" id="ltd-5G-Chu"/>
                                     <constraint firstItem="aee-t1-hTe" firstAttribute="leading" secondItem="Qyo-zp-JnH" secondAttribute="leading" id="oRj-vF-3zK"/>
                                     <constraint firstAttribute="bottom" secondItem="aee-t1-hTe" secondAttribute="bottom" id="yf9-mO-Hqj"/>

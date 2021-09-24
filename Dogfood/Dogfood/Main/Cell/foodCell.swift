@@ -16,14 +16,17 @@ class foodCell: UICollectionViewCell {
 
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     var food:Food? {
         didSet {
             
             if food!.image.contains("person") {
                 self.image.image = UserInfo(rawValue: food!.image)?.image
+                descriptionLabel.text = ""
             }else{
                 self.image.image = UIImage(named: food!.image)
+                descriptionLabel.text = FoodInfo(rawValue: food!.image)?.name
             }
             
             self.image.layer.cornerRadius = 33

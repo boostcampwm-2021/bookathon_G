@@ -51,6 +51,7 @@ class ChatViewController: UIViewController {
         ]) { error in
             self.tableView.reloadData()
         }
+        self.textField.text = ""
     }
     
     override func viewDidLoad() {
