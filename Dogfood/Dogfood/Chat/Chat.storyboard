@@ -43,7 +43,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="2y0-lx-ynn" firstAttribute="leading" secondItem="yfB-eT-p4d" secondAttribute="trailing" constant="10" id="2b9-VQ-9JN"/>
                                     <constraint firstItem="yfB-eT-p4d" firstAttribute="top" secondItem="vqa-vy-Xzq" secondAttribute="top" constant="8" id="CZi-HQ-ya7"/>
@@ -84,9 +84,6 @@
         <image name="sendIcon" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
