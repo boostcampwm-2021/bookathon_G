@@ -74,7 +74,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvA-Y6-HIt">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvA-Y6-HIt">
                                 <rect key="frame" x="20" y="812" width="374" height="50"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -107,6 +107,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
+                                    <action selector="nameTextFieldChanged:" destination="2fc-Zj-ZHc" eventType="editingChanged" id="HwN-91-sgF"/>
                                     <outlet property="delegate" destination="2fc-Zj-ZHc" id="Vg6-M6-cH5"/>
                                 </connections>
                             </textField>
@@ -146,6 +147,7 @@
                     <connections>
                         <outlet property="dogImageView" destination="Ul5-L8-WKj" id="xMj-07-QVA"/>
                         <outlet property="dogNameTextField" destination="YvQ-4G-cQU" id="zCQ-nn-RtB"/>
+                        <outlet property="nextButton" destination="NvA-Y6-HIt" id="zgD-rp-EUR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOb-aU-gRY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -165,7 +167,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIc-ab-U54">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIc-ab-U54">
                                 <rect key="frame" x="20" y="812" width="374" height="50"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -188,6 +190,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
+                                    <action selector="nameTextFieldChanged:" destination="T5c-sR-CQe" eventType="editingChanged" id="wd9-2g-Qg0"/>
                                     <outlet property="delegate" destination="T5c-sR-CQe" id="1iQ-oC-Jbl"/>
                                 </connections>
                             </textField>
@@ -216,6 +219,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="familyNameTextField" destination="lP5-1M-pXr" id="4Ir-Mf-b0f"/>
+                        <outlet property="nextButton" destination="PIc-ab-U54" id="UP6-Wz-OjJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KN3-K4-ne3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -230,7 +234,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3t-lC-PrW">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3t-lC-PrW">
                                 <rect key="frame" x="20" y="812" width="374" height="50"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -253,6 +257,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
+                                    <action selector="nameTextFieldChanged:" destination="zdb-v5-ch5" eventType="editingChanged" id="348-7A-20h"/>
                                     <outlet property="delegate" destination="zdb-v5-ch5" id="f8e-m8-ELm"/>
                                 </connections>
                             </textField>
@@ -281,6 +286,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="invitationFamilyNameTextField" destination="Lt5-Fg-fII" id="lGG-kV-jZ2"/>
+                        <outlet property="nextButton" destination="P3t-lC-PrW" id="dFo-gN-JSB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uka-en-7C7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -295,7 +301,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDd-8U-Cqw">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDd-8U-Cqw">
                                 <rect key="frame" x="20" y="812" width="374" height="50"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -328,6 +334,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
+                                    <action selector="nameTextFieldChanged:" destination="NIx-ow-WEr" eventType="editingChanged" id="3XA-KP-0LL"/>
                                     <outlet property="delegate" destination="NIx-ow-WEr" id="5AM-Fo-tUl"/>
                                 </connections>
                             </textField>
@@ -363,6 +370,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="사용자를 등록하세요." id="55N-2U-bZc"/>
                     <connections>
+                        <outlet property="nextButton" destination="pDd-8U-Cqw" id="ot0-OF-lta"/>
                         <outlet property="userImageView" destination="ijn-Yx-Elo" id="cvM-Gp-Dd5"/>
                         <outlet property="userNameTextField" destination="ZJM-rQ-7pE" id="HPJ-V2-0cS"/>
                     </connections>

@@ -30,21 +30,11 @@ extension UITextField {
         self.layer.borderColor = UIColor.lightGray.cgColor
         self.layer.borderWidth = 1
     }
-    
-    
-    
 }
 
 
-extension UINavigationController {
-
-  public func pushViewController(_ viewController: UIViewController,
-                                 animated: Bool,
-                                 completion: (() -> Void)?) {
-    CATransaction.begin()
-    CATransaction.setCompletionBlock(completion)
-    pushViewController(viewController, animated: animated)
-    CATransaction.commit()
-  }
-
+extension String {
+    func isNotEmpty() -> Bool {
+        return !self.isEmpty
+    }
 }

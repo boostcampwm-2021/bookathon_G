@@ -12,6 +12,7 @@ class DogRegistrationViewController: UIViewController {
 
     @IBOutlet weak var dogNameTextField: UITextField!
     @IBOutlet weak var dogImageView: UIImageView!
+    @IBOutlet weak var nextButton: UIButton!
     
     let storage = Storage.storage()
     private var dogImage: UIImage = UIImage(imageLiteralResourceName: "dogDefault")
@@ -22,10 +23,6 @@ class DogRegistrationViewController: UIViewController {
         self.dogNameTextField.setViewSettings(width: 10)
         self.dogImageView.makeCircle()
         
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.dogNameTextField.resignFirstResponder()
     }
     
     private func setNavigationController() {
@@ -66,17 +63,13 @@ class DogRegistrationViewController: UIViewController {
     @IBAction func nextButtonTouched(_ sender: Any) {
         // 강아지 정보 firebase로
         
-        guard let dogName = self.dogNameTextField.text else {
-            return
-        }
-        
-        guard let familyName = UserDefaults.standard.value(forKey: "familyCode") as? String else {
+        guard let dogName = self.dogNameTextField.text,
+              let familyName = UserDefaults.standard.value(forKey: "familyCode") as? String else {
             return
         }
 
         self.uploadimage(img: dogImage, name: dogName)
         
-//        var beforeDogs = [Any]()
         var users = [Any]()
 
         let dog: [String: Any] = [
@@ -93,8 +86,6 @@ class DogRegistrationViewController: UIViewController {
             }
         }
 
-//        beforeDogs.append(dog)
-
         Collection.familyCollection.document(familyName).setData([
             "members": users,
             "Dogs": [dog]
@@ -107,13 +98,34 @@ class DogRegistrationViewController: UIViewController {
     }
 }
 
+// Mark - Text Input 처리
 
 extension DogRegistrationViewController: UITextFieldDelegate {
+    
+    private func checkButtonEnabled() {
+        guard let text = self.dogNameTextField.text else { return }
+        
+        self.nextButton.isEnabled = text.isNotEmpty()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.dogNameTextField.resignFirstResponder()
+        self.checkButtonEnabled()
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.dogNameTextField.resignFirstResponder()
+        self.checkButtonEnabled()
+        
         return true
     }
+
+    @IBAction func nameTextFieldChanged(_ sender: Any) {
+        self.checkButtonEnabled()
+    }
 }
+
+
 
 
 extension DogRegistrationViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

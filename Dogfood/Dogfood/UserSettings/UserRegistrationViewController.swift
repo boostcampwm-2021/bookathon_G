@@ -11,6 +11,7 @@ class UserRegistrationViewController: UIViewController {
 
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var nextButton: UIButton!
     
     private var userImageString: String = "person1"
     
@@ -20,10 +21,6 @@ class UserRegistrationViewController: UIViewController {
         self.userNameTextField.setViewSettings(width: 10)
         self.userImageView.makeCircle()
         
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.userNameTextField.resignFirstResponder()
     }
     
     private func setNavigationController() {
@@ -92,13 +89,6 @@ class UserRegistrationViewController: UIViewController {
     
 }
 
-extension UserRegistrationViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.userNameTextField.resignFirstResponder()
-        return true
-    }
-}
-
 extension UserRegistrationViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -124,3 +114,33 @@ extension UserRegistrationViewController :PersonPopupViewControllerDelegate {
     }
         
 }
+
+
+// Mark - Text Input 처리
+
+extension UserRegistrationViewController: UITextFieldDelegate {
+    
+    private func checkButtonEnabled() {
+        guard let text = self.userNameTextField.text else { return }
+        
+        self.nextButton.isEnabled = text.isNotEmpty()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.userNameTextField.resignFirstResponder()
+        self.checkButtonEnabled()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.userNameTextField.resignFirstResponder()
+        self.checkButtonEnabled()
+        
+        return true
+    }
+
+    @IBAction func nameTextFieldChanged(_ sender: Any) {
+        self.checkButtonEnabled()
+    }
+}
+
+
