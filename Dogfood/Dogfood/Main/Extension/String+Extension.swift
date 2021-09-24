@@ -11,15 +11,18 @@ import UIKit
 extension String {
     
     func image() -> UIImage? {
-        let size = CGSize(width: 40, height: 40)
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        UIColor.white.set()
-        let rect = CGRect(origin: .zero, size: size)
-        UIRectFill(CGRect(origin: .zero, size: size))
-        (self as AnyObject).draw(in: rect, withAttributes: [.font: UIFont.systemFont(ofSize: 30)])
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image
+        let nsString = (self as NSString)
+        let font = UIFont.systemFont(ofSize: 1024) // you can change your font size here
+        let stringAttributes = [NSAttributedString.Key.font: font]
+        let imageSize = nsString.size(withAttributes: stringAttributes)
+
+        UIGraphicsBeginImageContextWithOptions(imageSize, false, 0) //  begin image context
+        UIColor.clear.set() // clear background
+        UIRectFill(CGRect(origin: CGPoint(), size: imageSize)) // set rect size
+        nsString.draw(at: CGPoint.zero, withAttributes: stringAttributes) // draw text within rect
+        let image = UIGraphicsGetImageFromCurrentImageContext() // create image from context
+        UIGraphicsEndImageContext() //  end image context
+
+        return image ?? UIImage()
     }
-    
 }
