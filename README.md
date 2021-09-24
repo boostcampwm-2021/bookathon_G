@@ -27,27 +27,33 @@
 
 ### 📑 상세 기능
 1. 가족 만들기
+    
     ![1](https://user-images.githubusercontent.com/37871541/134623608-9f7bfc98-48c5-4ca2-af4b-536026d7ac75.gif)
     1. 사용자 등록하기
         - 사용자 이름과 사용자 역할을 요청하였습니다. 사용자 역할은 CollectionView를 띄워서 6가지 이모지 중 하나를 선택할 수 있게 하였습니다.
     2. 강아지 등록하기
         - 강아지 사진과 강아지 이름을 요청하였습니다. 강아지 사진 같은 경우엔 picker에서 선택하게 되면 FirebaseStorage에 저장하고 URL을 요청해서 FireStore에 저장합니다.
 2. 방 참가하기
+    
     ![2](https://user-images.githubusercontent.com/37871541/134623606-bc12bc63-f619-48dd-8c79-450d619e928d.gif)
     - 가족 이름을 입력하면 이미 등록된 가족으로 이동하게 됩니다.
 
 3. 자동로그인
+    
     ![3](https://user-images.githubusercontent.com/37871541/134623605-c4f05fea-9403-4ce0-9020-496fc7443288.gif)
     - 이미 로그인한 적이 있다면? 자동로그인을 하는게 사용자 경험에 더 좋겟죠?
     - UserDefault라는 이미 iOS에서 제공해주는 전역 객체를 사용하였습니다.
 4. 밥 주기
+    
     ![4](https://user-images.githubusercontent.com/37871541/134623602-34bfc8c5-3aad-472c-b337-de236d70cfd2.gif)
     - 밥은 CollectionView 에 있는 버튼을 클릭하면 사용자 역할처럼 6가지 이모지 중 하나를 선택할 수 있게 하였습니다.
     - 기본적으로 4개의 밥만 시간과 이모지만 보이게 해두었고, 자세한 정보 혹은 추가 정보는 더보기 창을 눌러서 확인할 수 있습니다.
 5. 더보기
+    
     ![5](https://user-images.githubusercontent.com/37871541/134623595-eb2c508f-9cc7-4a17-a3a6-e065402e8e42.gif)
     - 더보기에서는 TableView를 이용하였습니다. 사용자 이모지 / 준 먹이 텍스트 정보 / 시간을 확인할 수 있습니다.
 6. 채팅하기
+    
     ![6](https://user-images.githubusercontent.com/37871541/134623582-ec22df0e-a2ef-4ae9-8f6a-ad15a6228918.gif)
     - 채팅은 ChatViewController에 Firestore 스냅샷을 달아 채팅데이터를 실시간 업데이트 하고 받아올 수 있도록 구현했습니다.
     - 채팅 데이터 조회, 추가 하면 스냅샷이 업데이트된 변경사항을 받아와 뷰컨트롤러에 보여줄 수 있습니다.
