@@ -64,7 +64,9 @@ class MainViewController: UIViewController {
     
     func navigationSet() {
         self.navigationItem.title = familyCode
+        navigationItem.hidesBackButton = true
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        
     }
     
     func layoutSet() {

@@ -15,16 +15,20 @@ class SelectViewController: UIViewController {
         super.viewDidLoad()
         self.setNavigationController()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.setNavigationController()
-    }
+//
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        self.setNavigationController()
+//    }
     
     private func setNavigationController() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.topItem?.title = "어떤 사용자세요?"
-        self.navigationController?.navigationBar.backItem?.title = "선택화면"
+        self.navigationItem.title = "어떤 사용자세요?"
+        
+        let barButtonItem = UIBarButtonItem(title: "선택화면", style: .plain, target: self, action: nil)
+        barButtonItem.tintColor = .lightGray
+        
+        self.navigationItem.backBarButtonItem = barButtonItem
     }
     
     @IBAction func invitationCodeButtonTouched(_ sender: Any) {

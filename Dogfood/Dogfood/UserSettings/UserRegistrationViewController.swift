@@ -11,26 +11,26 @@ class UserRegistrationViewController: UIViewController {
 
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var nextButton: UIButton!
     
     private var userImageString: String = "person1"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.userNameTextField.addLeftView(width: 10)
+        self.setNavigationController()
+        self.userNameTextField.setViewSettings(width: 10)
         self.userImageView.makeCircle()
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.setNavigationController()
-    }
-    
     private func setNavigationController() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.topItem?.title = "사용자를 등록하세요"
-        self.navigationController?.navigationBar.backItem?.title = "사용자 등록"
+        self.navigationItem.title = "사용자를 등록하세요"
+        
+        let barButtonItem = UIBarButtonItem(title: "사용자 등록", style: .plain, target: self, action: nil)
+        barButtonItem.tintColor = .lightGray
+        
+        self.navigationItem.backBarButtonItem = barButtonItem
     }
     
     @IBAction func userImageViewTapped(_ sender: Any) {
@@ -81,17 +81,12 @@ class UserRegistrationViewController: UIViewController {
         }
         
         let mainVC = UIStoryboard(name: "main", bundle: nil).instantiateViewController(withIdentifier: "main")
-        self.view.window?.rootViewController = UINavigationController(rootViewController: mainVC)
+        self.navigationController?.pushViewController(mainVC, animated: true)
+//        self.view.window?.rootViewController = UINavigationController(rootViewController: mainVC)
+        
     }
     
     
-}
-
-extension UserRegistrationViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.userNameTextField.resignFirstResponder()
-        return true
-    }
 }
 
 extension UserRegistrationViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -119,3 +114,33 @@ extension UserRegistrationViewController :PersonPopupViewControllerDelegate {
     }
         
 }
+
+
+// Mark - Text Input 처리
+
+extension UserRegistrationViewController: UITextFieldDelegate {
+    
+    private func checkButtonEnabled() {
+        guard let text = self.userNameTextField.text else { return }
+        
+        self.nextButton.isEnabled = text.isNotEmpty()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.userNameTextField.resignFirstResponder()
+        self.checkButtonEnabled()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.userNameTextField.resignFirstResponder()
+        self.checkButtonEnabled()
+        
+        return true
+    }
+
+    @IBAction func nameTextFieldChanged(_ sender: Any) {
+        self.checkButtonEnabled()
+    }
+}
+
+
