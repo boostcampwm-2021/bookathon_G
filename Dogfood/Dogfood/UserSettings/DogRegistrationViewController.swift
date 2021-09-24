@@ -18,22 +18,24 @@ class DogRegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.dogNameTextField.addLeftView(width: 10)
+        self.setNavigationController()
+        self.dogNameTextField.setViewSettings(width: 10)
         self.dogImageView.makeCircle()
         
     }
-
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.setNavigationController()
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.dogNameTextField.resignFirstResponder()
     }
     
     private func setNavigationController() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.topItem?.title = "강아지를 등록하세요"
-        self.navigationController?.navigationBar.backItem?.title = "강아지 등록"
+        self.navigationItem.title = "강아지를 등록하세요"
+        
+        let barButtonItem = UIBarButtonItem(title: "강아지 등록", style: .plain, target: self, action: nil)
+        barButtonItem.tintColor = .lightGray
+        
+        self.navigationItem.backBarButtonItem = barButtonItem
     }
     
     private func uploadimage(img :UIImage, name: String){

@@ -13,19 +13,22 @@ class FamilyRegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.familyNameTextField.addLeftView(width: 10)
+        self.setNavigationController()
+        self.familyNameTextField.setViewSettings(width: 10)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.setNavigationController()
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.familyNameTextField.resignFirstResponder()
     }
     
     private func setNavigationController() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.topItem?.title = "가족 이름을 등록해주세요"
-        self.navigationController?.navigationBar.backItem?.title = "가족 등록"
+        self.navigationItem.title = "가족 이름을 등록해주세요"
+        
+        let barButtonItem = UIBarButtonItem(title: "가족 등록", style: .plain, target: self, action: nil)
+        barButtonItem.tintColor = .lightGray
+        
+        self.navigationItem.backBarButtonItem = barButtonItem
     }
     
     @IBAction func nextButtonTouched(_ sender: Any) {
@@ -42,8 +45,6 @@ class FamilyRegistrationViewController: UIViewController {
                                                       ])
         
         
-        
-        
         let DogRegistrationViewController = UIStoryboard(name: "UserSettings", bundle: nil).instantiateViewController(withIdentifier: "DogRegistrationViewController")
         
         self.navigationController?.pushViewController(DogRegistrationViewController, animated: true)
@@ -52,8 +53,10 @@ class FamilyRegistrationViewController: UIViewController {
 }
 
 extension FamilyRegistrationViewController: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.familyNameTextField.resignFirstResponder()
         return true
     }
+    
 }

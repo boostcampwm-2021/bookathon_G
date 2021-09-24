@@ -16,21 +16,24 @@ class UserRegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.userNameTextField.addLeftView(width: 10)
+        self.setNavigationController()
+        self.userNameTextField.setViewSettings(width: 10)
         self.userImageView.makeCircle()
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.setNavigationController()
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.userNameTextField.resignFirstResponder()
     }
     
     private func setNavigationController() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.topItem?.title = "사용자를 등록하세요"
-        self.navigationController?.navigationBar.backItem?.title = "사용자 등록"
+        self.navigationItem.title = "사용자를 등록하세요"
+        
+        let barButtonItem = UIBarButtonItem(title: "사용자 등록", style: .plain, target: self, action: nil)
+        barButtonItem.tintColor = .lightGray
+        
+        self.navigationItem.backBarButtonItem = barButtonItem
     }
     
     @IBAction func userImageViewTapped(_ sender: Any) {
@@ -81,7 +84,9 @@ class UserRegistrationViewController: UIViewController {
         }
         
         let mainVC = UIStoryboard(name: "main", bundle: nil).instantiateViewController(withIdentifier: "main")
-        self.view.window?.rootViewController = UINavigationController(rootViewController: mainVC)
+        self.navigationController?.pushViewController(mainVC, animated: true)
+//        self.view.window?.rootViewController = UINavigationController(rootViewController: mainVC)
+        
     }
     
     

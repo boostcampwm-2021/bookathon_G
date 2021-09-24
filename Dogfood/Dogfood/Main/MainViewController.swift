@@ -60,7 +60,9 @@ class MainViewController: UIViewController {
     
     func navigationSet() {
         self.navigationItem.title = "만식이네"
+        navigationItem.hidesBackButton = true
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        
     }
     
     func layoutSet() {
