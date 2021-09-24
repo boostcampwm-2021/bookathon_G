@@ -58,8 +58,7 @@ enum FoodInfo:String {
 
 struct Config {
     
-    static let users = "users"
-    static let dogs = "Dogs"
+    static let chat = "chat"
     static let family = "family"
     static let userName = "userName"
     static let familyCode = "familyCode"
@@ -68,8 +67,14 @@ struct Config {
 }
 
 struct Collection {
+    
     static let familyCollection : CollectionReference = {
         let db = Firestore.firestore()
         return db.collection(Config.family)
+    }()
+    
+    static let chatCollection : CollectionReference = {
+        let db = Firestore.firestore()
+        return db.collection(Config.chat)
     }()
 }

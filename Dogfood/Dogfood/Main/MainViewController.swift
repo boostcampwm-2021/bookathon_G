@@ -42,6 +42,10 @@ class MainViewController: UIViewController {
     @IBOutlet weak var dogName: UILabel!
     @IBOutlet weak var familyCollectionView: UICollectionView!
     @IBOutlet weak var feedCollectionView: UICollectionView!
+    @IBAction func chat(_ sender: Any) {
+        let chatVC = UIStoryboard(name: "Chat", bundle: nil).instantiateViewController(withIdentifier: "chat")
+        self.navigationController?.pushViewController(chatVC, animated: true)
+    }
     
     
     //MARK: - LifeCycles
@@ -59,7 +63,7 @@ class MainViewController: UIViewController {
     //MARK: - Helpers
     
     func navigationSet() {
-        self.navigationItem.title = "만식이네"
+        self.navigationItem.title = familyCode
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     

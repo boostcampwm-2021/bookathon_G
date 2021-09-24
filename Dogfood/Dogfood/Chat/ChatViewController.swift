@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 struct Chat {
     let imgStr:String
@@ -15,23 +16,63 @@ struct Chat {
 
 class ChatViewController: UIViewController {
 
+    var chats:[[String:String]] = []
     var message:[Chat] = []
     let myCellId = "myCell"
     let yourCellId = "yourCell"
     var userName: String {
         return UserDefaults.standard.string(forKey: Config.userName) ?? "user"
     }
-    
-    
+    var userImg: String {
+        return UserDefaults.standard.string(forKey: Config.userImg) ?? "person1"
+    }
+    var familyCode:String {
+        return UserDefaults.standard.string(forKey: Config.familyCode) ?? "abc"
+    }
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var chatView: UIView!
+    @IBOutlet weak var sendButton: UIButton!
+    
+    @IBAction func send(_ sender: Any) {
+        guard let content = textField.text else { return }
+        
+        let chat:[String:String] = [
+            "userName" : userName,
+            "imgStr" : userImg,
+            "content" : content
+        ]
+        
+        self.chats.append(chat)
+        
+        Collection.chatCollection.document(familyCode).updateData([
+            "message" : chats
+        ]) { error in
+            self.tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableviewSet()
+        addSnapshotListener()
+    }
+    
+    func tableviewSet() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "myChatCell", bundle: nil), forCellReuseIdentifier: myCellId)
         tableView.register(UINib(nibName: "yourChatCell", bundle: nil), forCellReuseIdentifier: yourCellId)
     }
+    
+    func chatLayout() {
+        self.chatView.backgroundColor = .systemBrown
+        self.textField.layer.cornerRadius = 15
+        self.textField.attributedPlaceholder = NSAttributedString(AttributedString("채팅을 입력해주세요", attributes:  AttributeContainer([ .font : UIFont.boldSystemFont(ofSize: 15), .foregroundColor : UIColor.white ])))
+        
+    } 
+        
 }
 
 

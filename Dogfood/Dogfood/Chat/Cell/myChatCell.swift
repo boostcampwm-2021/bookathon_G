@@ -23,6 +23,8 @@ class myChatCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.content.roundCorners(cornerRadius: 8, maskedCorners: [.layerMaxXMinYCorner , .layerMinXMaxYCorner,
+                                                                    .layerMinXMinYCorner ])
         
     }
 

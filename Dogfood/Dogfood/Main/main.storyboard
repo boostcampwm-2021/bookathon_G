@@ -55,6 +55,14 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59e-kv-FZz">
+                                <rect key="frame" x="333" y="53" width="71" height="57"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chat"/>
+                                <connections>
+                                    <action selector="chat:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="QOH-EZ-xex"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -64,8 +72,10 @@
                             <constraint firstItem="i9m-lA-1kh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="BPs-xD-EV2"/>
                             <constraint firstItem="aPN-zv-E1b" firstAttribute="centerX" secondItem="i9m-lA-1kh" secondAttribute="centerX" id="Hg4-0x-awT"/>
                             <constraint firstItem="i9m-lA-1kh" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="LOA-hb-MxN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="59e-kv-FZz" secondAttribute="trailing" constant="10" id="UU7-ci-Grs"/>
                             <constraint firstItem="wdF-cq-FDU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="czS-ck-tQm"/>
                             <constraint firstItem="4Ni-4S-GAq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gmN-Yp-NKc"/>
+                            <constraint firstItem="59e-kv-FZz" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="9" id="mBb-UY-HMD"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4Ni-4S-GAq" secondAttribute="trailing" id="oSI-ID-VCV"/>
                             <constraint firstItem="4Ni-4S-GAq" firstAttribute="top" secondItem="wdF-cq-FDU" secondAttribute="bottom" constant="20" id="qXa-3H-E30"/>
                             <constraint firstItem="wdF-cq-FDU" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="tbd-R8-y9k"/>
@@ -86,6 +96,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chat" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

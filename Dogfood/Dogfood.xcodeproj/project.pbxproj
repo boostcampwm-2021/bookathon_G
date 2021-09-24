@@ -51,6 +51,8 @@
 		FFD9D67B26FCF0780079500E /* myChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D67926FCF0780079500E /* myChatCell.xib */; };
 		FFD9D67E26FCF0890079500E /* yourChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9D67C26FCF0890079500E /* yourChatCell.swift */; };
 		FFD9D67F26FCF0890079500E /* yourChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD9D67D26FCF0890079500E /* yourChatCell.xib */; };
+		FFEB739126FD5E0C00DDC07B /* chatViewController+Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEB739026FD5E0C00DDC07B /* chatViewController+Firestore.swift */; };
+		FFEB739326FD6AB200DDC07B /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEB739226FD6AB200DDC07B /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,8 @@
 		FFD9D67926FCF0780079500E /* myChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = myChatCell.xib; sourceTree = "<group>"; };
 		FFD9D67C26FCF0890079500E /* yourChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yourChatCell.swift; sourceTree = "<group>"; };
 		FFD9D67D26FCF0890079500E /* yourChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = yourChatCell.xib; sourceTree = "<group>"; };
+		FFEB739026FD5E0C00DDC07B /* chatViewController+Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "chatViewController+Firestore.swift"; sourceTree = "<group>"; };
+		FFEB739226FD6AB200DDC07B /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +269,7 @@
 			children = (
 				FFD9D66426FCA7BC0079500E /* Date+Extension.swift */,
 				FFD9D66C26FCDC0C0079500E /* String+Extension.swift */,
+				FFEB739226FD6AB200DDC07B /* View+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 				FFD9D67326FCEFE30079500E /* Cell */,
 				FFD9D66F26FCEF9C0079500E /* Chat.storyboard */,
 				FFD9D67126FCEFDA0079500E /* ChatViewController.swift */,
+				FFEB739026FD5E0C00DDC07B /* chatViewController+Firestore.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -419,10 +425,12 @@
 			files = (
 				250DCD1126FC9A9100F2D0E9 /* UserRegistrationViewController.swift in Sources */,
 				FFD9D67A26FCF0780079500E /* myChatCell.swift in Sources */,
+				FFEB739126FD5E0C00DDC07B /* chatViewController+Firestore.swift in Sources */,
 				FFD9D64626FC65B30079500E /* MainViewController+CollectionView.swift in Sources */,
 				FFD9D64D26FC737F0079500E /* feedCell.swift in Sources */,
 				250DCD1326FC9AA300F2D0E9 /* DogRegistrationViewController.swift in Sources */,
 				250DCD1F26FCE30400F2D0E9 /* PersonPopupViewController.swift in Sources */,
+				FFEB739326FD6AB200DDC07B /* View+Extension.swift in Sources */,
 				FFD9D62626FC55E50079500E /* ViewController.swift in Sources */,
 				FFD9D62226FC55E50079500E /* AppDelegate.swift in Sources */,
 				250DCD0D26FC9A5E00F2D0E9 /* SelectViewController.swift in Sources */,
@@ -597,12 +605,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Dogfood/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -624,12 +634,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Dogfood/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

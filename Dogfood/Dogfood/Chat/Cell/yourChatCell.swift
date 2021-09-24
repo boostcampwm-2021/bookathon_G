@@ -17,12 +17,13 @@ class yourChatCell: UITableViewCell {
         didSet {
             userName.text = chat!.userName
             content.text = chat!.content
-            userImage.image = UserInfo(rawValue: chat!.imgStr)?.image
+            userImage.image = UserInfo(rawValue: chat!.imgStr)?.image            
         }
     }
     
     override func awakeFromNib() {
-        
+        self.content.roundCorners(cornerRadius: 8, maskedCorners: [.layerMaxXMinYCorner ,.layerMaxXMaxYCorner ,
+                                                                    .layerMinXMinYCorner ])
     }
     
 }
