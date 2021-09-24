@@ -76,13 +76,7 @@ extension PopupViewController : UICollectionViewDelegate , UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let len =  self.innerView.frame.size.width / 3
-        return CGSize(width:len, height: len)
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        
-        return UIEdgeInsets(top: -10, left: 0, bottom: 0, right: 0)
+        return CGSize(width:len, height: len + 20)
         
     }
     

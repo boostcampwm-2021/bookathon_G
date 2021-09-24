@@ -15,6 +15,7 @@ struct Food {
 class foodCell: UICollectionViewCell {
 
     @IBOutlet weak var innerView: UIView!
+    @IBOutlet weak var imageLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
     
     var food:Food? {
@@ -25,6 +26,8 @@ class foodCell: UICollectionViewCell {
             }else{
                 self.image.image = UIImage(named: food!.image)
             }
+            
+            imageLabel.text = FoodInfo(rawValue: food!.image)?.name
             
             self.image.layer.cornerRadius = 33
             self.image.backgroundColor = food!.color
