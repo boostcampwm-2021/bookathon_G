@@ -88,7 +88,7 @@
                                     <action selector="nextButtonTouched:" destination="2fc-Zj-ZHc" eventType="touchUpInside" id="afi-4Y-EdX"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dogDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Ul5-L8-WKj">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dogDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Ul5-L8-WKj">
                                 <rect key="frame" x="87" y="104" width="240" height="240"/>
                                 <gestureRecognizers/>
                                 <constraints>

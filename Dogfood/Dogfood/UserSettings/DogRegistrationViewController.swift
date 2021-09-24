@@ -22,7 +22,7 @@ class DogRegistrationViewController: UIViewController {
         self.setNavigationController()
         self.dogNameTextField.setViewSettings(width: 10)
         self.dogImageView.makeCircle()
-        
+        self.nextButton.setViewSettings()
     }
     
     private func setNavigationController() {

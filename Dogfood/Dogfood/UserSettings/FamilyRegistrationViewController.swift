@@ -16,6 +16,7 @@ class FamilyRegistrationViewController: UIViewController {
         super.viewDidLoad()
         self.setNavigationController()
         self.familyNameTextField.setViewSettings(width: 10)
+        self.nextButton.setViewSettings()
     }
     
     private func setNavigationController() {

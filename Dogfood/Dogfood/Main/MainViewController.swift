@@ -67,6 +67,10 @@ class MainViewController: UIViewController {
         navigationItem.hidesBackButton = true
         self.navigationController?.navigationBar.prefersLargeTitles = true
         
+        let barButtonItem = UIBarButtonItem(title: familyCode, style: .plain, target: self, action: nil)
+        barButtonItem.tintColor = .lightGray
+        
+        self.navigationItem.backBarButtonItem = barButtonItem
     }
     
     func layoutSet() {

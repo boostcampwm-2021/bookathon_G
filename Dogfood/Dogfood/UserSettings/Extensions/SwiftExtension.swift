@@ -32,6 +32,11 @@ extension UITextField {
     }
 }
 
+extension UIButton {
+    func setViewSettings() {
+        self.layer.cornerRadius = 5
+    }
+}
 
 extension String {
     func isNotEmpty() -> Bool {

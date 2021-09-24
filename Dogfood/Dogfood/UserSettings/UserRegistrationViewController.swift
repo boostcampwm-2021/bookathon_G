@@ -20,6 +20,7 @@ class UserRegistrationViewController: UIViewController {
         self.setNavigationController()
         self.userNameTextField.setViewSettings(width: 10)
         self.userImageView.makeCircle()
+        self.nextButton.setViewSettings()
         
     }
     

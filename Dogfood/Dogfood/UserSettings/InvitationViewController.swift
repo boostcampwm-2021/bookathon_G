@@ -17,6 +17,7 @@ class InvitationViewController: UIViewController {
         super.viewDidLoad()
         self.setNavigationController()
         self.invitationFamilyNameTextField.setViewSettings(width: 10)
+        self.nextButton.setViewSettings()
     }
     
     
