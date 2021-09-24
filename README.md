@@ -69,13 +69,14 @@
 
 ### 💾 데이터베이스 구조
 
-계획 단계에서 DB 구조
+#### 계획 단계에서 DB 구조
 <img width="1111" alt="스크린샷 2021-09-23 오후 2 39 41" src="https://user-images.githubusercontent.com/37871541/134459394-5a682a80-5663-40db-a954-f2c089313dd6.png">
 <img width="1111" alt="스크린샷 2021-09-23 오후 2 39 57" src="https://user-images.githubusercontent.com/37871541/134459393-405443ba-7f30-4741-b601-8cd27c5e2c66.png">
 <img width="1111" alt="스크린샷 2021-09-23 오후 2 40 08" src="https://user-images.githubusercontent.com/37871541/134459389-0416fbb0-191e-458e-b254-13cc6609bf55.png">
 
-구현하면서 변경된 DB 구조
-![image](https://user-images.githubusercontent.com/40790219/134619927-656283a6-3f09-409b-8a89-83d3ddedfcd7.png)
+#### 구현하면서 변경된 DB 구조
+![image](https://user-images.githubusercontent.com/37871541/134624521-d5df3a60-52d9-4e64-88f3-90e63d7132ad.png)
+<!-- ![image](https://user-images.githubusercontent.com/40790219/134619927-656283a6-3f09-409b-8a89-83d3ddedfcd7.png) -->
 ![image](https://user-images.githubusercontent.com/40790219/134620016-54016ec6-9d16-46d4-b86a-47e764b2b4b0.png)
 
 ### 🖥 기술 스택
